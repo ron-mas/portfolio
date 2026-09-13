@@ -4,7 +4,7 @@ const index = WORKS_DATA.findIndex(w => w.slug === slug);
 const work = WORKS_DATA[index];
 
 if (!work) {
-  location.href = "../../index.html";
+  location.href = "../index.html";
 }
 
 document.title = `${work.title} | Portfolio`;
