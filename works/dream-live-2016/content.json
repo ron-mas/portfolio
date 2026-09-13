@@ -1,0 +1,50 @@
+{
+  "content": [
+    {
+      "type": "heading",
+      "text": "企画概要"
+    },
+    {
+      "type": "text",
+      "text": "ミュージカル『テニスの王子様』3rdシーズン Dream Live 2016のWebプロモーション施策です。「テニミュガチャ」と題し、毎日キャストのカード画像が当たるガチャを楽しめる企画を立案しました。"
+    },
+    {
+      "type": "image",
+      "src": "assets/sample-dream-live.svg",
+      "caption": "プロモーションサイト"
+    },
+    {
+      "type": "heading",
+      "text": "ガチャコンテンツ"
+    },
+    {
+      "type": "text",
+      "text": "公演への期待感を高めるWebコンテンツとして、毎日楽しめるガチャを展開。PC・スマートフォンの両方に対応しました。"
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "assets/sample-dream-live.svg",
+        "assets/sample-dream-life.svg",
+        "assets/sample-dream-life2.svg"
+      ],
+      "columns": 3
+    },
+    {
+      "type": "heading",
+      "text": "制作素材"
+    },
+    {
+      "type": "text",
+      "text": "ガチャで使用するカード画像や、日替わりで表示されるアイコンなどの素材制作も担当しました。"
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "assets/sample-dream-life.svg",
+        "assets/sample-dream-life2.svg"
+      ],
+      "columns": 2
+    }
+  ]
+}
