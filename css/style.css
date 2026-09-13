@@ -214,3 +214,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 70px 28px 100px; }
   .profile-avatar { max-width:180px; }
   .password-box { padding:32px 25px; }
 }
+
+[hidden] {
+  display: none !important;
+}
