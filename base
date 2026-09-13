@@ -1,0 +1,225 @@
+const WORKS_DATA = [
+  {
+    "slug": "dream-live-2016",
+    "title": "ミュージカル『テニスの王子様』3rdシーズン Dream Live 2016",
+    "shortTitle": "Dream Live 2016",
+    "year": 2016,
+    "yearLabel": "2013 - 2014",
+    "category": [
+      "web",
+      "advertising",
+      "goods",
+      "illustration"
+    ],
+    "thumbnail": "assets/sample-dream-live.svg",
+    "overview": "ミュージカル『テニスの王子様』3rdシーズン Dream Live 2016のWebプロモーション施策です。「テニミュガチャ」と題し、毎日キャストのカード画像が当たるガチャを楽しめる企画を立案し、公演への期待感を高めるWebコンテンツとして展開しました。",
+    "company": "面白法人カヤック",
+    "tools": "Adobe Illustrator",
+    "areas": "キャラクターアバター / 服飾アイテム",
+    "roles": "イラストレーター・グラフィックデザイナー・Webデザイナー・グッズデザイナー・ディレクター・企画"
+  },
+  {
+    "slug": "dream-life-2017",
+    "title": "ミュージカル『テニスの王子様』3rdシーズン Dream Live 2017「Dream Life」",
+    "shortTitle": "Dream Life 2017",
+    "year": 2017,
+    "yearLabel": "2017",
+    "category": [
+      "web"
+    ],
+    "thumbnail": "assets/sample-dream-life.svg",
+    "overview": "前年に引き続き、Dream LiveのWebプロモーション施策として、日替わりで電話風のボイスコンテンツを楽しめる「Dream Life」を企画・制作しました。",
+    "company": "面白法人カヤック",
+    "tools": "Adobe Illustrator / Photoshop",
+    "areas": "Webデザイン / 素材制作 / ボイス編集",
+    "roles": "ディレクター・Webデザイナー"
+  },
+  {
+    "slug": "dream-life-2-2018",
+    "title": "ミュージカル『テニスの王子様』15周年記念コンサート Dream Live 2018「Dream Life 2」",
+    "shortTitle": "Dream Life 2",
+    "year": 2018,
+    "yearLabel": "2018",
+    "category": [
+      "web"
+    ],
+    "thumbnail": "assets/sample-dream-life2.svg",
+    "overview": "前年に好評だった「Dream Life」をバージョンアップ。「Dream Life 2」と題し、日替わりでビデオ通話風の動画を楽しめるプロモーションサイトを企画・制作しました。",
+    "company": "面白法人カヤック",
+    "tools": "Adobe Illustrator / Photoshop",
+    "areas": "Webデザイン / 素材制作 / 動画編集",
+    "roles": "ディレクター・Webデザイナー"
+  }
+];
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+  <div id="password-screen" class="password-screen">
+    <div class="password-box">
+      <p class="eyebrow">PORTFOLIO</p>
+      <h1>Portfolio</h1>
+      <p>パスワードを入力してください</p>
+      <form id="password-form">
+        <label class="sr-only" for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Password">
+        <button type="submit">LOGIN</button>
+        <p id="password-error" class="error" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="site" hidden>
+    <header class="site-header">
+      <a class="logo" href="index.html">Portfolio</a>
+      <nav>
+        <a href="#works">WORKS</a>
+        <a href="profile.html">PROFILE</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="works" class="works-page">
+        <div class="section-heading">
+          <p class="eyebrow">WORKS</p>
+          <h1>Works</h1>
+          <p>これまでに制作した実績をご紹介します。</p>
+        </div>
+
+        <div class="works-controls">
+          <div id="filters" class="filter-list" aria-label="カテゴリ">
+            <button class="filter is-active" data-category="all">すべて</button>
+            <button class="filter" data-category="illustration">イラスト</button>
+            <button class="filter" data-category="advertising">広告</button>
+            <button class="filter" data-category="web">Web</button>
+            <button class="filter" data-category="goods">グッズ</button>
+          </div>
+          <label class="sort">
+            <span>並び順</span>
+            <select id="sort">
+              <option value="new">新しい順</option>
+              <option value="old">古い順</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="works-grid" class="works-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Profile | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Portfolio</a>
+    <nav>
+      <a href="index.html">WORKS</a>
+      <a class="is-current" href="profile.html">PROFILE</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile-page">
+      <div class="section-heading">
+        <p class="eyebrow">PROFILE</p>
+        <h1>Profile</h1>
+        <p>デザインを通して、好きなことをカタチにする仕事をしています。</p>
+      </div>
+
+      <div class="profile-intro">
+        <div class="profile-avatar">PROFILE</div>
+        <div>
+          <dl class="profile-list">
+            <div><dt>名前</dt><dd>〇〇 〇〇</dd></div>
+            <div><dt>職種</dt><dd>デザイナー / クリエイター</dd></div>
+            <div><dt>拠点</dt><dd>東京</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <section class="profile-section">
+        <h2>SKILLS</h2>
+        <div class="tags">
+          <span>Adobe Illustrator</span><span>Adobe Photoshop</span><span>Figma</span>
+          <span>HTML / CSS</span><span>Illustration</span><span>Graphic Design</span>
+          <span>Web Design</span><span>Goods Design</span><span>Planning</span><span>Direction</span>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>CAREER</h2>
+        <div class="career">
+          <div><b>2013 - 2014</b><span>〇〇株式会社</span><span>イラストレーター / グラフィックデザイナー / Webデザイナー</span></div>
+          <div><b>2015 - 2019</b><span>フリーランス</span><span>デザイナー / イラストレーター</span></div>
+          <div><b>2019 - 現在</b><span>〇〇株式会社</span><span>デザイナー / 企画</span></div>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>CONTACT</h2>
+        <p>mail@example.com</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
+
+# Portfolio site
+
+GitHub Pages向けの静的ポートフォリオサイトのベースです。
+
+## まず変更するところ
+
+### 1. パスワード
+`js/site.js` の
+`const PASSWORD = "portfolio";`
+を好きな文字列に変更。
+
+※この方式は「簡易的な閲覧制限」です。GitHub Pages上の本格的な非公開認証ではありません。
+
+### 2. 作品追加
+`data.js` に作品情報を1件追加。
+
+作品本文は
+`works/作品slug/content.json`
+に記述します。
+
+使える本文パーツ：
+
+- `heading`：見出し
+- `text`：文章
+- `image`：画像＋キャプション
+- `gallery`：2〜4列の画像グリッド
+
+画像は作品フォルダに入れて、JSONからファイル名を指定します。
+
+### 3. 実画像
+`assets/` と各作品フォルダのサンプル画像を自分の画像に差し替えます。
+
+## GitHub Pages
+
+GitHubにリポジトリを作り、このフォルダの中身をpush。
+GitHubの Settings → Pages で、デプロイ元を設定すると公開できます。
+
+## 注意
+
+このベースでは、詳細ページの本文を `fetch()` でJSONから読み込むため、ローカルで `file://` からHTMLを直接開くとブラウザの制約でJSONが読み込めない場合があります。
+GitHub Pages上では通常どおり動作します。ローカル確認にはVS Code等のLive Serverを使うのがおすすめです。
