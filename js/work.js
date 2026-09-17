@@ -4,7 +4,7 @@ const index = WORKS_DATA.findIndex(w => w.slug === slug);
 const work = WORKS_DATA[index];
 
 if (!work) {
-  location.href = "../index.html";
+  location.href = "../../index.html";
 }
 
 document.title = `${work.title} | Portfolio`;
@@ -75,7 +75,7 @@ function renderContent(items) {
     if (item.type === "image") {
       const block = document.createElement("figure");
       block.className = "content-image";
-      block.innerHTML = `<div class="image-wrap ${item.sample === false ? "" : "sample-overlay"}"><img src="../${slug}/${item.src}" alt=""></div>${item.caption ? `<figcaption class="caption">${escapeHtml(item.caption)}</figcaption>` : ""}`;
+      block.innerHTML = `<div class="image-wrap ${item.sample === false ? "" : "sample-overlay"}"><img src="../assets/${slug}/${item.src}" alt=""></div>${item.caption ? `<figcaption class="caption">${escapeHtml(item.caption)}</figcaption>` : ""}`;
       root.appendChild(block);
     }
     if (item.type === "gallery") {
@@ -85,7 +85,7 @@ function renderContent(items) {
       item.images.forEach(src => {
         const wrap = document.createElement("div");
         wrap.className = "image-wrap sample-overlay";
-        wrap.innerHTML = `<img src="../${slug}/${src}" alt="">`;
+          wrap.innerHTML = `<img src="../assets/${slug}/${src}" alt="">`;
         block.appendChild(wrap);
       });
       root.appendChild(block);
