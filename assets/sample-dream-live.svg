@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
-      <rect width="1200" height="700" fill="#f5f8fa"/>
-      <rect x="60" y="60" width="1080" height="580" rx="28" fill="#ffffff" stroke="#abced8" stroke-width="3"/>
-      <rect x="100" y="100" width="1000" height="70" rx="16" fill="#abced8" opacity=".22"/>
-      <circle cx="150" cy="135" r="13" fill="#abced8"/><circle cx="190" cy="135" r="13" fill="#abced8" opacity=".7"/><circle cx="230" cy="135" r="13" fill="#abced8" opacity=".45"/>
-      <text x="600" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" fill="#39535d">Dream Live 2016</text>
-      <text x="600" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#71838a">SAMPLE IMAGE</text>
-      <rect x="420" y="450" width="360" height="8" rx="4" fill="#abced8"/>
-    </svg>
