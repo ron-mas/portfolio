@@ -41,10 +41,10 @@ function renderWorks() {
       <a class="work-card" href="works/work.html?slug=${encodeURIComponent(w.slug)}">
         <div class="thumb"><img src="${w.thumbnail}" alt=""></div>
         <div class="card-info">
-          <h2>${escapeHtml(w.shortTitle)}</h2>
+          <h2>${escapeHtml(w.Title)}</h2>
           <div class="meta">
             <span class="category-pill">${categoryLabel(w.category[0])}</span>
-            <span>${w.year}</span>
+            <span>${w.yearLabel}</span>
           </div>
         </div>
       </a>
