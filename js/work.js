@@ -7,14 +7,19 @@ const work = WORKS_DATA[index];
 if (!work) {
   location.href = "../index.html";
 } else {
+
   // ----------------------------
   // 基本情報
   // ----------------------------
 
   document.title = `${work.title} | Portfolio`;
 
-  document.getElementById("work-title").textContent = work.title;
-  document.getElementById("work-overview").textContent = work.overview || "";
+  document.getElementById("work-title").textContent =
+    work.title;
+
+  document.getElementById("work-overview").textContent =
+    work.overview || "";
+
   document.getElementById("work-category").textContent =
     work.category.map(categoryLabel).join(" / ");
 
@@ -38,14 +43,16 @@ if (!work) {
 
 
   // ----------------------------
-  // 「もっと見る」開閉
+  // もっと見る
   // ----------------------------
 
-  const moreInfoButton = document.getElementById("more-info");
+  const moreInfoButton =
+    document.getElementById("more-info");
 
   if (moreInfoButton) {
     moreInfoButton.addEventListener("click", () => {
-      const card = document.querySelector(".info-card");
+      const card =
+        document.querySelector(".info-card");
 
       if (!card) return;
 
@@ -64,7 +71,9 @@ if (!work) {
   // ----------------------------
 
   function detailUrl(i) {
-    return `work.html?slug=${encodeURIComponent(WORKS_DATA[i].slug)}`;
+    return `work.html?slug=${encodeURIComponent(
+      WORKS_DATA[i].slug
+    )}`;
   }
 
   function setPager() {
@@ -102,7 +111,8 @@ if (!work) {
   }
 
   function setLink(id, href) {
-    const el = document.getElementById(id);
+    const el =
+      document.getElementById(id);
 
     if (!el) return;
 
@@ -115,7 +125,8 @@ if (!work) {
   }
 
   function setBottom(id, item, i) {
-    const el = document.getElementById(id);
+    const el =
+      document.getElementById(id);
 
     if (!el) return;
 
@@ -126,10 +137,12 @@ if (!work) {
 
     el.href = detailUrl(i);
 
-    const strong = el.querySelector("strong");
+    const strong =
+      el.querySelector("strong");
 
     if (strong) {
-      strong.textContent = item.title;
+      strong.textContent =
+        item.title;
     }
   }
 
@@ -137,10 +150,10 @@ if (!work) {
 
 
   // ----------------------------
-  // 本文読み込み
+  // 本文データ読み込み
   // ----------------------------
 
-  fetch(`../${slug}/content.json`)
+  fetch(`./${slug}/content.json`)
     .then(response => {
       if (!response.ok) {
         throw new Error(
@@ -156,7 +169,8 @@ if (!work) {
     .catch(error => {
       console.error(error);
 
-      const root = document.getElementById("work-content");
+      const root =
+        document.getElementById("work-content");
 
       if (root) {
         root.innerHTML =
@@ -170,7 +184,8 @@ if (!work) {
   // ----------------------------
 
   function renderContent(items) {
-    const root = document.getElementById("work-content");
+    const root =
+      document.getElementById("work-content");
 
     if (!root) return;
 
@@ -178,27 +193,46 @@ if (!work) {
 
     items.forEach(item => {
 
+      // --------------------------
       // 見出し
+      // --------------------------
+
       if (item.type === "heading") {
-        const h = document.createElement("h2");
-        h.textContent = item.text;
+        const h =
+          document.createElement("h2");
+
+        h.textContent =
+          item.text;
+
         root.appendChild(h);
       }
 
 
+      // --------------------------
       // テキスト
+      // --------------------------
+
       if (item.type === "text") {
-        const p = document.createElement("p");
-        p.textContent = item.text;
+        const p =
+          document.createElement("p");
+
+        p.textContent =
+          item.text;
+
         root.appendChild(p);
       }
 
 
-      // 画像1枚
-      if (item.type === "image") {
-        const block = document.createElement("figure");
+      // --------------------------
+      // 画像
+      // --------------------------
 
-        block.className = "content-image";
+      if (item.type === "image") {
+        const block =
+          document.createElement("figure");
+
+        block.className =
+          "content-image";
 
         const imageClass =
           item.sample === false
@@ -228,18 +262,27 @@ if (!work) {
       }
 
 
+      // --------------------------
       // ギャラリー
+      // --------------------------
+
       if (item.type === "gallery") {
-        const block = document.createElement("div");
+        const block =
+          document.createElement("div");
 
-        const cols = item.columns || 3;
+        const cols =
+          item.columns || 3;
 
-        block.className = `gallery cols-${cols}`;
+        block.className =
+          `gallery cols-${cols}`;
 
         item.images.forEach(src => {
-          const wrap = document.createElement("div");
 
-          wrap.className = "image-wrap sample-overlay";
+          const wrap =
+            document.createElement("div");
+
+          wrap.className =
+            "image-wrap sample-overlay";
 
           wrap.innerHTML = `
             <img
@@ -255,11 +298,16 @@ if (!work) {
       }
 
 
+      // --------------------------
       // 動画
-      if (item.type === "video") {
-        const block = document.createElement("figure");
+      // --------------------------
 
-        block.className = "content-video";
+      if (item.type === "video") {
+        const block =
+          document.createElement("figure");
+
+        block.className =
+          "content-video";
 
         const videoClass =
           item.sample === false
@@ -328,4 +376,5 @@ if (!work) {
       }[m])
     );
   }
+
 }
