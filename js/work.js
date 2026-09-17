@@ -5,6 +5,7 @@ const work = WORKS_DATA[index];
 
 if (!work) {
   location.href = "../index.html";
+  return;
 }
 
 document.title = `${work.title} | Portfolio`;
