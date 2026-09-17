@@ -1,9 +1,12 @@
 {
+  "content": [
+    {
       "type": "image",
-      "src": "assets/01_bokupoke/01_1.png",
+      "src": "01_1.png"
     },
-
-{
-        "type": "image",
-        "src": "assets/01_bokupoke/01_2.png",
-    },
+    {
+      "type": "image",
+      "src": "01_2.png"
+    }
+  ]
+}
