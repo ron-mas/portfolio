@@ -1,9 +1,12 @@
 {
+  "content": [
+    {
       "type": "image",
-      "src": "assets/02_pokekoro/02_1.png",
+      "src": "02_1.png"
     },
-
-{
-        "type": "image",
-        "src": "assets/02_pokekoro/02_2.png",
-    },
+    {
+      "type": "image",
+      "src": "02_2.png"
+    }
+  ]
+}
