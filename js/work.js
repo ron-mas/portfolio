@@ -48,7 +48,7 @@ function setBottom(id, item, i) {
   const el = document.getElementById(id);
   if (!item) { el.style.visibility = "hidden"; return; }
   el.href = detailUrl(i);
-  el.querySelector("strong").textContent = item.shortTitle;
+    el.querySelector("strong").textContent = item.title;
 }
 setPager();
 
