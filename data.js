@@ -32,7 +32,7 @@ const WORKS_DATA = [
     "overview": "",
     "company": "ココネ株式会社",
     "tools": "Adobe Illustrator / Adobe Flash",
-    "areas": "アバターアイテム",
+    "areas": "アバターアイテムのイラスト/アニメーション",
     "roles": "イラスト"
   }
 ]
