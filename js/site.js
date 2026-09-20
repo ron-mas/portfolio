@@ -1,4 +1,4 @@
-const PASSWORD = "portfolio"; // TODO: change this password
+const PASSWORD = "portfolio";
 
 const passwordScreen = document.getElementById("password-screen");
 const site = document.getElementById("site");
@@ -6,12 +6,17 @@ const form = document.getElementById("password-form");
 const input = document.getElementById("password");
 const error = document.getElementById("password-error");
 
+
+// ========================================
+// Password
+// ========================================
+
 if (sessionStorage.getItem("portfolio-auth") === "ok") {
   unlock();
 }
 
-form?.addEventListener("submit", (e) => {
-  e.preventDefault();
+form?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
   if (input.value === PASSWORD) {
     sessionStorage.setItem("portfolio-auth", "ok");
@@ -21,98 +26,170 @@ form?.addEventListener("submit", (e) => {
   }
 });
 
+
 function unlock() {
   document.body.classList.remove("locked");
-  passwordScreen.hidden = true;
-  site.hidden = false;
+
+  if (passwordScreen) {
+    passwordScreen.hidden = true;
+  }
+
+  if (site) {
+    site.hidden = false;
+  }
+
   renderWorks();
 }
+
+
+// ========================================
+// Works
+// ========================================
 
 function renderWorks() {
   const grid = document.getElementById("works-grid");
 
-  if (!grid) return;
+  if (!grid || !Array.isArray(WORKS_DATA)) {
+    return;
+  }
 
   let category = "all";
   let order = "new";
 
+
   function update() {
     let items = [...WORKS_DATA];
 
+
+    // --------------------------------
+    // Category filter
+    // --------------------------------
+
     if (category !== "all") {
-      items = items.filter(w => w.category.includes(category));
+      items = items.filter(
+        work => work.category.includes(category)
+      );
     }
 
-    items.sort((a, b) =>
-      order === "new"
-        ? b.year - a.year
-        : a.year - b.year
-    );
 
-    grid.innerHTML = items.map(w => `
+    // --------------------------------
+    // Sort
+    // --------------------------------
+
+    items.sort((a, b) => {
+      return order === "new"
+        ? b.year - a.year
+        : a.year - b.year;
+    });
+
+
+    // --------------------------------
+    // Render
+    // --------------------------------
+
+    grid.innerHTML = items.map(work => `
       <a
         class="work-card"
-        href="works/work.html?slug=${encodeURIComponent(w.slug)}"
+        href="works/work.html?slug=${encodeURIComponent(work.slug)}"
       >
+
         <div class="thumb">
-          <img src="${w.thumbnail}" alt="">
+          <img
+            src="${work.thumbnail}"
+            alt=""
+          >
         </div>
 
         <div class="card-info">
-          <h2>${escapeHtml(w.title)}</h2>
-
-          <div class="meta">
-            <span class="category-pill">
-              ${categoryLabel(w.category[0])}
-            </span>
-
-            <span>${escapeHtml(w.yearLabel || w.year)}</span>
-          </div>
+          <h2>
+            ${escapeHtml(work.title)}
+          </h2>
         </div>
+
       </a>
     `).join("");
   }
 
-  document.querySelectorAll(".filter").forEach(btn => {
-    btn.addEventListener("click", () => {
+
+  // --------------------------------
+  // Category buttons
+  // --------------------------------
+
+  document.querySelectorAll(".filter").forEach(button => {
+
+    button.addEventListener("click", () => {
+
       document
         .querySelectorAll(".filter")
-        .forEach(x => x.classList.remove("is-active"));
+        .forEach(item => {
+          item.classList.remove("is-active");
+        });
 
-      btn.classList.add("is-active");
 
-      category = btn.dataset.category;
+      button.classList.add("is-active");
+
+
+      category =
+        button.dataset.category || "all";
+
 
       update();
+
     });
+
   });
 
-  document.getElementById("sort")?.addEventListener("change", (e) => {
-    order = e.target.value;
-    update();
-  });
+
+  // --------------------------------
+  // Sort
+  // --------------------------------
+
+  document
+    .getElementById("sort")
+    ?.addEventListener("change", event => {
+
+      order = event.target.value;
+
+      update();
+
+    });
+
 
   update();
 }
 
-function categoryLabel(c) {
+
+// ========================================
+// Category label
+// ========================================
+
+function categoryLabel(category) {
+
   return {
     illustration: "イラスト",
     advertising: "広告",
     web: "Web",
     goods: "グッズ"
-  }[c] || c;
+  }[category] || category;
+
 }
 
-function escapeHtml(str) {
-  return String(str).replace(
+
+// ========================================
+// Escape HTML
+// ========================================
+
+function escapeHtml(value) {
+
+  return String(value).replace(
     /[&<>"']/g,
-    m => ({
+    character => ({
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
       '"': "&quot;",
       "'": "&#039;"
-    }[m])
+    }[character])
   );
+
 }
