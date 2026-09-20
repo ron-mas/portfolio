@@ -20,27 +20,12 @@ if (!work) {
 
   document.title = `${work.title} | Portfolio`;
 
-  const titleElement =
-    document.getElementById("work-title");
+  document.getElementById("work-title").textContent =
+    work.title;
 
   const overviewElement =
     document.getElementById("work-overview");
 
-  const categoryElement =
-    document.getElementById("work-category");
-
-  titleElement.textContent =
-    work.title;
-
-  categoryElement.textContent =
-    work.category
-      .map(categoryLabel)
-      .join(" / ");
-
-
-  // --------------------------------
-  // 概要
-  // --------------------------------
 
   if (work.overview) {
 
@@ -49,13 +34,19 @@ if (!work) {
 
   } else {
 
-    overviewElement.style.display =
-      "none";
+    overviewElement.remove();
 
     document
-      .querySelector(".work-card")
+      .querySelector(".work-detail-card")
       ?.classList.add("no-overview");
+
   }
+
+
+  document.getElementById("work-category").textContent =
+    work.category
+      .map(categoryLabel)
+      .join(" / ");
 
 
   // --------------------------------
@@ -76,13 +67,15 @@ if (!work) {
 
 
   // --------------------------------
-  // ページャー
+  // 前後の実績
   // --------------------------------
 
   function detailUrl(i) {
+
     return `work.html?slug=${encodeURIComponent(
       WORKS_DATA[i].slug
     )}`;
+
   }
 
 
@@ -92,6 +85,7 @@ if (!work) {
       index > 0
         ? WORKS_DATA[index - 1]
         : null;
+
 
     const next =
       index < WORKS_DATA.length - 1
@@ -119,6 +113,7 @@ if (!work) {
 
     const element =
       document.getElementById(id);
+
 
     if (!element) return;
 
@@ -223,14 +218,13 @@ if (!work) {
     items.forEach(item => {
 
 
-      // ------------------------------
       // 見出し
-      // ------------------------------
-
       if (item.type === "heading") {
 
         const heading =
-          document.createElement("h2");
+          document.createElement(
+            "h2"
+          );
 
         heading.textContent =
           item.text;
@@ -242,14 +236,13 @@ if (!work) {
       }
 
 
-      // ------------------------------
       // テキスト
-      // ------------------------------
-
       if (item.type === "text") {
 
         const paragraph =
-          document.createElement("p");
+          document.createElement(
+            "p"
+          );
 
         paragraph.textContent =
           item.text;
@@ -261,10 +254,7 @@ if (!work) {
       }
 
 
-      // ------------------------------
       // 画像
-      // ------------------------------
-
       if (item.type === "image") {
 
         const block =
@@ -309,10 +299,7 @@ if (!work) {
       }
 
 
-      // ------------------------------
       // ギャラリー
-      // ------------------------------
-
       if (item.type === "gallery") {
 
         const block =
@@ -363,16 +350,14 @@ if (!work) {
       }
 
 
-      // ------------------------------
       // 動画
-      // ------------------------------
-
       if (item.type === "video") {
 
         const block =
           document.createElement(
             "figure"
           );
+
 
         block.className =
           "content-video";
