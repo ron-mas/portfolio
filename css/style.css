@@ -1077,15 +1077,16 @@ main {
 
 .sample-overlay::after {
   content: "";
-  transform: none;
 
   position: absolute;
   inset: 0;
 
   pointer-events: none;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='120' viewBox='0 0 280 120'%3E%3Ctext x='140' y='10' text-anchor='middle' transform='rotate(-30 140 100)' fill='%235a696e' fill-opacity='.10' font-family='Arial, sans-serif' font-size='30' font-weight='500' letter-spacing='3'%3ESAMPLE%3C/text%3E%3C/svg%3E")
-  
-   background-repeat: repeat;
-   background-size: 280px 180px;
+  transform: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='180' viewBox='0 0 280 180'%3E%3Ctext x='140' y='105' text-anchor='middle' transform='rotate(-30 140 90)' fill='%235a696e' fill-opacity='.10' font-family='Arial, sans-serif' font-size='30' font-weight='500' letter-spacing='3'%3ESAMPLE%3C/text%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  background-size: 280px 180px;
 }
