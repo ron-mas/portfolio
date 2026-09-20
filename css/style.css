@@ -1064,6 +1064,7 @@ main {
   .profile-intro {
     grid-template-columns: 1fr;
   }
+}
 
    /* ========================================
    SAMPLE watermark
@@ -1080,6 +1081,4 @@ main {
 
   background-repeat: repeat;
   background-size: 420px 220px;
-}
-
 }
