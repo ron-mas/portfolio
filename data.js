@@ -15,7 +15,6 @@ const WORKS_DATA = [
     "company": "面白法人カヤック",
     "tools": "Adobe Illustrator",
     "areas": "キャラクターアバター / アイテム",
-    "roles": "イラスト"
   },
 
     // 02_pokekoro
@@ -33,7 +32,6 @@ const WORKS_DATA = [
     "company": "ココネ株式会社",
     "tools": "Adobe Illustrator / Adobe Flash",
     "areas": "アバターアイテムのイラスト/アニメーション",
-    "roles": "イラスト"
   },
 
     {
@@ -49,6 +47,5 @@ const WORKS_DATA = [
     "company": "re-vue合同会社",
     "tools": "Photoshop / Illustrator / Flash",
     "areas": "webデザイン / ガチャ演出 / 画像制作 / 企画 / ディレクション",
-    "roles": "web"
   },
 ]
