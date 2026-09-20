@@ -442,3 +442,19 @@ if (!work) {
   }
 
 }
+
+// ========================================
+// Disable image context menu / dragging
+// ========================================
+
+document.addEventListener("contextmenu", (event) => {
+  if (event.target.closest("img")) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("dragstart", (event) => {
+  if (event.target.closest("img")) {
+    event.preventDefault();
+  }
+});
