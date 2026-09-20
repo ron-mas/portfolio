@@ -47,7 +47,7 @@ button, input, select { font: inherit; }
 .site-header nav a:hover, .site-header nav a.is-current { color: var(--key-dark); }
 
 main { max-width: 1180px; margin: 0 auto; padding: 70px 28px 100px; }
-.section-heading { margin-bottom: 36px; }
+
 .eyebrow {
   margin: 0 0 5px;
   color: var(--key-dark);
@@ -82,10 +82,10 @@ main { max-width: 1180px; margin: 0 auto; padding: 70px 28px 100px; }
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
-  background-image: none;
   padding: 8px 14px;
   color: var(--ink);
 }
@@ -99,7 +99,13 @@ main { max-width: 1180px; margin: 0 auto; padding: 70px 28px 100px; }
   background: #edf4f6;
   box-shadow: var(--shadow);
 }
-.work-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s; }
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .4s;
+}
 .work-card:hover img { transform:scale(1.025); }
 .work-card .card-info { padding:13px 3px 0; }
 .work-card h2 { margin:0; font-size:14px; line-height:1.65; font-weight:600; }
