@@ -1077,6 +1077,7 @@ main {
 
 .sample-overlay::after {
   content: "";
+  transform: none;
 
   position: absolute;
   inset: 0;
