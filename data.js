@@ -6,7 +6,8 @@ const WORKS_DATA = [
     "slug": "01_bokupoke",
     "title": "「ぼくらの甲子園！ポケット」イラスト",
     "year": 2013,
-    "yearLabel": "2013 - 2014",
+    "yearLabel": "2013/8 - 2014/12",
+    "sortDate": "2013/8",
     "category": [
       "illustration"
     ],
@@ -23,7 +24,8 @@ const WORKS_DATA = [
     "slug": "02_pokekoro",
     "title": "「ポケコロ」アバターアイテムイラスト",
     "year": 2015,
-    "yearLabel": "2015",
+    "yearLabel": "2015/1 - 2015/8",
+    "sortDate": "2015/1",
     "category": [
       "illustration"
     ],
@@ -40,7 +42,8 @@ const WORKS_DATA = [
     "slug": "03_tenimyu1",
     "title": "Dream Live 2016 特設サイト",
     "year": 2016,
-    "yearLabel": "2016",
+    "yearLabel": "2016/2 - 2016/4",
+    "sortDate": "2016/2",
     "category": [
       "web"
     ],
@@ -57,7 +60,8 @@ const WORKS_DATA = [
     "slug": "04_tenimyu2",
     "title": "Dream Live 2017 特設サイト",
     "year": 2017,
-    "yearLabel": "2017",
+    "yearLabel": "2017/3 - 2017/5",
+    "sortDate": "2017/3",
     "category": [
       "web"
     ],
@@ -74,7 +78,8 @@ const WORKS_DATA = [
     "slug": "05_tenimyu3",
     "title": "Dream Live 2018 特設サイト",
     "year": 2018,
-    "yearLabel": "2018",
+    "yearLabel": "2018/3 - 2018/5",
+    "sortDate": "2018/3",
     "category": [
       "web"
     ],
@@ -91,7 +96,8 @@ const WORKS_DATA = [
     "slug": "06_ansute",
     "title": "あんステTSF 特設サイト",
     "year": 2017,
-    "yearLabel": "2017-2018",
+    "yearLabel": "2017/11 - 2018/1",
+    "sortDate": "2017-11",
     "category": [
       "web"
     ],
