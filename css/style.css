@@ -1072,6 +1072,7 @@ main {
 
 .sample-overlay {
   position: relative;
+  overflow: hidden;
 }
 
 .sample-overlay::after {
@@ -1082,9 +1083,8 @@ main {
 
   pointer-events: none;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='%235a696e' fill-opacity='.11' font-family='Arial, sans-serif' font-size='30' font-weight='500' letter-spacing='3'%3E%3Ctext x='20' y='75' transform='rotate(-30 20 75)'%3ESAMPLE%3C/text%3E%3Ctext x='205' y='75' transform='rotate(-30 205 75)'%3ESAMPLE%3C/text%3E%3Ctext x='-70' y='185' transform='rotate(-30 -70 185)'%3ESAMPLE%3C/text%3E%3Ctext x='115' y='185' transform='rotate(-30 115 185)'%3ESAMPLE%3C/text%3E%3Ctext x='300' y='185' transform='rotate(-30 300 185)'%3ESAMPLE%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='180' viewBox='0 0 280 180'%3E%3Ctext x='140' y='100' text-anchor='middle' transform='rotate(-30 140 100)' fill='%235a696e' fill-opacity='.10' font-family='Arial, sans-serif' font-size='30' font-weight='500' letter-spacing='3'%3ESAMPLE%3C/text%3E%3C/svg%3E");
 
   background-repeat: repeat;
-
-  background-size: 360px 220px;
+  background-size: 280px 180px;
 }
