@@ -399,6 +399,9 @@ main {
   font-weight: 700;
 }
 
+.work-detail-heading h1.has-opening-bracket {
+  text-indent: -0.08em;
+}
 
 /* ----------------------------------------
    Overview
