@@ -10,12 +10,16 @@
 <body>
 
   <header class="site-header">
-    <a class="logo" href="../index.html">Portfolio</a>
+
+    <a class="logo" href="../index.html">
+      Portfolio
+    </a>
 
     <nav>
       <a href="../index.html">WORKS</a>
       <a href="../profile.html">PROFILE</a>
     </nav>
+
   </header>
 
 
@@ -23,20 +27,21 @@
 
     <article id="work-detail" class="work-detail">
 
-      <!-- 一覧へ戻る -->
       <div class="work-back">
         <a href="../index.html">← 一覧に戻る</a>
       </div>
 
 
-      <!-- 作品情報カード -->
       <header class="work-header">
 
-        <div class="work-card">
+        <div class="work-detail-card">
 
-          <div class="work-card-heading">
+          <div class="work-detail-heading">
 
-            <div class="eyebrow" id="work-category"></div>
+            <div
+              class="category-tag"
+              id="work-category"
+            ></div>
 
             <h1 id="work-title"></h1>
 
@@ -83,15 +88,19 @@
       </header>
 
 
-      <!-- 作品本文 -->
-      <div id="work-content" class="work-content"></div>
+      <div
+        id="work-content"
+        class="work-content"
+      ></div>
 
 
-      <!-- ページャー -->
       <nav class="work-pager">
 
-        <!-- 左：次の実績 -->
-        <a id="bottom-next" href="#">
+        <a
+          id="bottom-next"
+          href="#"
+          class="pager-next"
+        >
           <span class="pager-arrow">←</span>
 
           <div>
@@ -101,8 +110,11 @@
         </a>
 
 
-        <!-- 右：前の実績 -->
-        <a id="bottom-prev" href="#">
+        <a
+          id="bottom-prev"
+          href="#"
+          class="pager-prev"
+        >
           <div>
             <small>前の実績</small>
             <strong></strong>
