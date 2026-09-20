@@ -6,56 +6,120 @@
   <title>Work | Portfolio</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header class="site-header">
     <a class="logo" href="../index.html">Portfolio</a>
+
     <nav>
       <a href="../index.html">WORKS</a>
       <a href="../profile.html">PROFILE</a>
     </nav>
   </header>
 
+
   <main>
+
     <article id="work-detail" class="work-detail">
-      <div class="work-top-nav">
+
+      <!-- 一覧へ戻る -->
+      <div class="work-back">
         <a href="../index.html">← 一覧に戻る</a>
-        <div><a id="prev-link" href="#">← 前の実績</a><a id="next-link" href="#">次の実績 →</a></div>
       </div>
 
+
+      <!-- 作品情報カード -->
       <header class="work-header">
-        <div class="work-title">
-          <div class="eyebrow" id="work-category"></div>
-          <h1 id="work-title"></h1>
-          <p id="work-overview"></p>
+
+        <div class="work-card">
+
+          <div class="work-card-heading">
+
+            <div class="eyebrow" id="work-category"></div>
+
+            <h1 id="work-title"></h1>
+
+            <p id="work-overview"></p>
+
+          </div>
+
+
+          <div class="work-info">
+
+            <div class="work-info-column">
+
+              <div class="work-info-item">
+                <dt>担当</dt>
+                <dd id="info-areas"></dd>
+              </div>
+
+              <div class="work-info-item">
+                <dt>ツール</dt>
+                <dd id="info-tools"></dd>
+              </div>
+
+            </div>
+
+
+            <div class="work-info-column">
+
+              <div class="work-info-item">
+                <dt>所属</dt>
+                <dd id="info-company"></dd>
+              </div>
+
+              <div class="work-info-item">
+                <dt>制作年</dt>
+                <dd id="info-year"></dd>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="info-card">
-          <div class="info-card-main">
-            <dl>
-              <div><dt>制作年</dt><dd id="info-year"></dd></div>
-              <div><dt>所属</dt><dd id="info-company"></dd></div>
-              <div><dt>使用ツール</dt><dd id="info-tools"></dd></div>
-            </dl>
-            <dl>
-              <div><dt>担当領域</dt><dd id="info-areas"></dd></div>
-              <div><dt>役割</dt><dd id="info-roles"></dd></div>
-              <div><dt>カテゴリ</dt><dd id="info-categories"></dd></div>
-            </dl>
-          </div>
-          <button id="more-info" class="more-button" type="button">もっと見る <span>⌄</span></button>
-        </div>
       </header>
 
+
+      <!-- 作品本文 -->
       <div id="work-content" class="work-content"></div>
 
+
+      <!-- ページャー -->
       <nav class="work-pager">
-        <a id="bottom-prev" href="#"><span>←</span><small>前の実績</small><strong></strong></a>
-        <a id="bottom-next" href="#"><small>次の実績</small><strong></strong><span>→</span></a>
+
+        <!-- 左：次の実績 -->
+        <a id="bottom-next" href="#">
+          <span class="pager-arrow">←</span>
+
+          <div>
+            <small>次の実績</small>
+            <strong></strong>
+          </div>
+        </a>
+
+
+        <!-- 右：前の実績 -->
+        <a id="bottom-prev" href="#">
+          <div>
+            <small>前の実績</small>
+            <strong></strong>
+          </div>
+
+          <span class="pager-arrow">→</span>
+        </a>
+
       </nav>
+
     </article>
+
   </main>
+
 
   <script src="../data.js"></script>
   <script src="../js/work.js"></script>
+
 </body>
 </html>
