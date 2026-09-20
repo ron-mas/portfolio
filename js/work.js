@@ -20,8 +20,13 @@ if (!work) {
 
   document.title = `${work.title} | Portfolio`;
 
-  document.getElementById("work-title").textContent =
-    work.title;
+  const titleElement = document.getElementById("work-title");
+
+titleElement.textContent = work.title;
+
+if (work.title.startsWith("「")) {
+  titleElement.classList.add("has-opening-bracket");
+}
 
   const overviewElement =
     document.getElementById("work-overview");
