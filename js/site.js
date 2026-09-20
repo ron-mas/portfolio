@@ -77,9 +77,15 @@ function renderWorks() {
     // --------------------------------
 
     items.sort((a, b) => {
-      return order === "new"
-        ? b.year - a.year
-        : a.year - b.year;
+
+      const dateA = a.sortDate || "";
+      const dateB = b.sortDate || "";
+
+      if (order === "new") {
+        return dateB.localeCompare(dateA);
+      }
+
+      return dateA.localeCompare(dateB);
     });
 
 
@@ -125,16 +131,12 @@ function renderWorks() {
           item.classList.remove("is-active");
         });
 
-
       button.classList.add("is-active");
-
 
       category =
         button.dataset.category || "all";
 
-
       update();
-
     });
 
   });
