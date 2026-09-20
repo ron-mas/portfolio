@@ -46,7 +46,7 @@ button, input, select { font: inherit; }
 .site-header nav a { color: #6b7c82; }
 .site-header nav a:hover, .site-header nav a.is-current { color: var(--key-dark); }
 
-main { max-width: 1180px; margin: 0 auto; padding: 70px 28px 100px; }
+main { max-width: 1180px; margin: 0 auto; padding: 30px 30px 30px; }
 
 .eyebrow {
   margin: 0 0 5px;
