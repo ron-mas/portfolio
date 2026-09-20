@@ -1,27 +1,66 @@
 const params = new URLSearchParams(location.search);
 const slug = params.get("slug");
 
-const index = WORKS_DATA.findIndex(w => w.slug === slug);
+const index = WORKS_DATA.findIndex(
+  work => work.slug === slug
+);
+
 const work = WORKS_DATA[index];
 
+
 if (!work) {
+
   location.href = "../index.html";
+
 } else {
 
-  // ----------------------------
+  // --------------------------------
   // 基本情報
-  // ----------------------------
+  // --------------------------------
 
   document.title = `${work.title} | Portfolio`;
 
-  document.getElementById("work-title").textContent =
+  const titleElement =
+    document.getElementById("work-title");
+
+  const overviewElement =
+    document.getElementById("work-overview");
+
+  const categoryElement =
+    document.getElementById("work-category");
+
+  titleElement.textContent =
     work.title;
 
-  document.getElementById("work-overview").textContent =
-    work.overview || "";
+  categoryElement.textContent =
+    work.category
+      .map(categoryLabel)
+      .join(" / ");
 
-  document.getElementById("work-category").textContent =
-    work.category.map(categoryLabel).join(" / ");
+
+  // --------------------------------
+  // 概要
+  // --------------------------------
+
+  if (work.overview) {
+
+    overviewElement.textContent =
+      work.overview;
+
+  } else {
+
+    overviewElement.style.display =
+      "none";
+
+    document
+      .querySelector(".work-card")
+      ?.classList.add("no-overview");
+  }
+
+
+  // --------------------------------
+  // 作品情報
+  // --------------------------------
 
   document.getElementById("info-year").textContent =
     work.yearLabel || "";
@@ -35,40 +74,10 @@ if (!work) {
   document.getElementById("info-areas").textContent =
     work.areas || "";
 
-  document.getElementById("info-roles").textContent =
-    work.roles || "";
 
-  document.getElementById("info-categories").textContent =
-    work.category.map(categoryLabel).join("・");
-
-
-  // ----------------------------
-  // もっと見る
-  // ----------------------------
-
-  const moreInfoButton =
-    document.getElementById("more-info");
-
-  if (moreInfoButton) {
-    moreInfoButton.addEventListener("click", () => {
-      const card =
-        document.querySelector(".info-card");
-
-      if (!card) return;
-
-      card.classList.toggle("is-open");
-
-      moreInfoButton.innerHTML =
-        card.classList.contains("is-open")
-          ? "閉じる ↑"
-          : "もっと見る ↓";
-    });
-  }
-
-
-  // ----------------------------
-  // 前後の実績
-  // ----------------------------
+  // --------------------------------
+  // ページャー
+  // --------------------------------
 
   function detailUrl(i) {
     return `work.html?slug=${encodeURIComponent(
@@ -76,7 +85,9 @@ if (!work) {
     )}`;
   }
 
+
   function setPager() {
+
     const prev =
       index > 0
         ? WORKS_DATA[index - 1]
@@ -87,15 +98,13 @@ if (!work) {
         ? WORKS_DATA[index + 1]
         : null;
 
-    setLink(
-      "prev-link",
-      prev ? detailUrl(index - 1) : null
+
+    setBottom(
+      "bottom-next",
+      next,
+      index + 1
     );
 
-    setLink(
-      "next-link",
-      next ? detailUrl(index + 1) : null
-    );
 
     setBottom(
       "bottom-prev",
@@ -103,141 +112,175 @@ if (!work) {
       index - 1
     );
 
-    setBottom(
-      "bottom-next",
-      next,
-      index + 1
-    );
   }
 
-  function setLink(id, href) {
-    const el =
-      document.getElementById(id);
-
-    if (!el) return;
-
-    if (!href) {
-      el.style.visibility = "hidden";
-      return;
-    }
-
-    el.href = href;
-  }
 
   function setBottom(id, item, i) {
-    const el =
+
+    const element =
       document.getElementById(id);
 
-    if (!el) return;
+    if (!element) return;
+
 
     if (!item) {
-      el.style.visibility = "hidden";
+
+      element.style.visibility =
+        "hidden";
+
       return;
+
     }
 
-    el.href = detailUrl(i);
+
+    element.href =
+      detailUrl(i);
+
 
     const strong =
-      el.querySelector("strong");
+      element.querySelector("strong");
+
 
     if (strong) {
+
       strong.textContent =
         item.title;
+
     }
+
   }
+
 
   setPager();
 
 
-  // ----------------------------
-  // 本文データ読み込み
-  // ----------------------------
+  // --------------------------------
+  // 本文読み込み
+  // --------------------------------
 
   fetch(`./${slug}/content.json`)
+
     .then(response => {
+
       if (!response.ok) {
+
         throw new Error(
           `content.json の読み込みに失敗しました: ${response.status}`
         );
+
       }
 
       return response.json();
+
     })
+
     .then(data => {
-      renderContent(data.content || []);
+
+      renderContent(
+        data.content || []
+      );
+
     })
+
     .catch(error => {
+
       console.error(error);
 
       const root =
-        document.getElementById("work-content");
+        document.getElementById(
+          "work-content"
+        );
+
 
       if (root) {
+
         root.innerHTML =
           `<p>本文データを読み込めませんでした。</p>`;
+
       }
+
     });
 
 
-  // ----------------------------
+  // --------------------------------
   // 本文表示
-  // ----------------------------
+  // --------------------------------
 
   function renderContent(items) {
+
     const root =
-      document.getElementById("work-content");
+      document.getElementById(
+        "work-content"
+      );
+
 
     if (!root) return;
 
+
     root.innerHTML = "";
+
 
     items.forEach(item => {
 
-      // --------------------------
+
+      // ------------------------------
       // 見出し
-      // --------------------------
+      // ------------------------------
 
       if (item.type === "heading") {
-        const h =
+
+        const heading =
           document.createElement("h2");
 
-        h.textContent =
+        heading.textContent =
           item.text;
 
-        root.appendChild(h);
+        root.appendChild(
+          heading
+        );
+
       }
 
 
-      // --------------------------
+      // ------------------------------
       // テキスト
-      // --------------------------
+      // ------------------------------
 
       if (item.type === "text") {
-        const p =
+
+        const paragraph =
           document.createElement("p");
 
-        p.textContent =
+        paragraph.textContent =
           item.text;
 
-        root.appendChild(p);
+        root.appendChild(
+          paragraph
+        );
+
       }
 
 
-      // --------------------------
+      // ------------------------------
       // 画像
-      // --------------------------
+      // ------------------------------
 
       if (item.type === "image") {
+
         const block =
-          document.createElement("figure");
+          document.createElement(
+            "figure"
+          );
 
         block.className =
           "content-image";
+
 
         const imageClass =
           item.sample === false
             ? "image-wrap"
             : "image-wrap sample-overlay";
+
 
         block.innerHTML = `
           <div class="${imageClass}">
@@ -258,31 +301,45 @@ if (!work) {
           }
         `;
 
-        root.appendChild(block);
+
+        root.appendChild(
+          block
+        );
+
       }
 
 
-      // --------------------------
+      // ------------------------------
       // ギャラリー
-      // --------------------------
+      // ------------------------------
 
       if (item.type === "gallery") {
-        const block =
-          document.createElement("div");
 
-        const cols =
+        const block =
+          document.createElement(
+            "div"
+          );
+
+
+        const columns =
           item.columns || 3;
 
+
         block.className =
-          `gallery cols-${cols}`;
+          `gallery cols-${columns}`;
+
 
         item.images.forEach(src => {
 
           const wrap =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
+
 
           wrap.className =
             "image-wrap sample-overlay";
+
 
           wrap.innerHTML = `
             <img
@@ -291,28 +348,41 @@ if (!work) {
             >
           `;
 
-          block.appendChild(wrap);
+
+          block.appendChild(
+            wrap
+          );
+
         });
 
-        root.appendChild(block);
+
+        root.appendChild(
+          block
+        );
+
       }
 
 
-      // --------------------------
+      // ------------------------------
       // 動画
-      // --------------------------
+      // ------------------------------
 
       if (item.type === "video") {
+
         const block =
-          document.createElement("figure");
+          document.createElement(
+            "figure"
+          );
 
         block.className =
           "content-video";
+
 
         const videoClass =
           item.sample === false
             ? "video-wrap"
             : "video-wrap sample-overlay";
+
 
         block.innerHTML = `
           <div class="${videoClass}">
@@ -339,42 +409,51 @@ if (!work) {
           }
         `;
 
-        root.appendChild(block);
+
+        root.appendChild(
+          block
+        );
+
       }
 
     });
+
   }
 
 
-  // ----------------------------
+  // --------------------------------
   // カテゴリ名
-  // ----------------------------
+  // --------------------------------
 
-  function categoryLabel(c) {
+  function categoryLabel(category) {
+
     return {
       illustration: "イラスト",
       advertising: "広告",
       web: "Web",
       goods: "グッズ"
-    }[c] || c;
+    }[category] || category;
+
   }
 
 
-  // ----------------------------
+  // --------------------------------
   // HTMLエスケープ
-  // ----------------------------
+  // --------------------------------
 
   function escapeHtml(str) {
+
     return String(str).replace(
       /[&<>"']/g,
-      m => ({
+      character => ({
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
         '"': "&quot;",
         "'": "&#039;"
-      }[m])
+      }[character])
     );
+
   }
 
 }
