@@ -11,27 +11,37 @@
 <body class="locked">
 
   <div id="password-screen" class="password-screen">
-    <div class="password-box">
-      <p class="eyebrow">PORTFOLIO</p>
-      <h1>Portfolio</h1>
-      <p>パスワードを入力してください</p>
+  <div class="password-box">
 
-      <form id="password-form">
-        <label class="sr-only" for="password">Password</label>
+    <h1>Portfolio</h1>
 
-        <input
-          id="password"
-          type="password"
-          autocomplete="current-password"
-          placeholder="Password"
-        >
+    <form id="password-form">
 
-        <button type="submit">LOGIN</button>
+      <label class="sr-only" for="password">
+        Password
+      </label>
 
-        <p id="password-error" class="error" aria-live="polite"></p>
-      </form>
-    </div>
+      <input
+        id="password"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Password"
+      >
+
+      <button type="submit">
+        LOGIN
+      </button>
+
+      <p
+        id="password-error"
+        class="error"
+        aria-live="polite"
+      ></p>
+
+    </form>
+
   </div>
+</div>
 
 
   <div id="site" hidden>
