@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700&family=Parisienne&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Ms+Madi&family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
 
 /* ========================================
    Variables
@@ -88,7 +87,6 @@ select {
 .logo {
   font-family: "Ms Madi", cursive;
   font-size: 29px;
-
   color: var(--key-dark);
 }
 
@@ -883,13 +881,9 @@ main {
 
 .password-box h1 {
   margin: 0 0 10px;
-
-  font-family: "Parisienne", cursive;
-
+  font-family: "Ms Madi", cursive;
   font-size: 48px;
-
   font-weight: 400;
-
   color: var(--key-dark);
 }
 
