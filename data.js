@@ -34,5 +34,21 @@ const WORKS_DATA = [
     "tools": "Adobe Illustrator / Adobe Flash",
     "areas": "アバターアイテムのイラスト/アニメーション",
     "roles": "イラスト"
-  }
+  },
+
+    {
+    "slug": "03_tenimyu1",
+    "title": "Dream Live 2016 特設サイト",
+    "year": 2016,
+    "yearLabel": "2016",
+    "category": [
+      "web"
+    ],
+    "thumbnail": "assets/03_tenimyu1/03_1.png",
+    "overview": "ミュージカル『テニスの王子様』3rdシーズン Dream Live 2016のWebプロモーション施策です。「テニミュガチャ」という毎日キャストのカード画像が当たるガチャを楽しめる企画を立案し、公演への期待感を高めるWebコンテンツとして展開しました。企画立案から、全体進行管理、Webデザイン、カードや日替わりアイコンなどの素材制作まで、一貫して担当しました。",
+    "company": "re-vue合同会社",
+    "tools": "Photoshop / Illustrator / Flash",
+    "areas": "webデザイン / ガチャ演出 / 画像制作 / 企画 / ディレクション",
+    "roles": "web"
+  },
 ]
