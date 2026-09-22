@@ -75,83 +75,77 @@ if (work.title.startsWith("「")) {
   // 前後の実績
   // --------------------------------
 
-  function detailUrl(i) {
+  // --------------------------------
+// 前後の実績
+// --------------------------------
 
-    return `work.html?slug=${encodeURIComponent(
-      WORKS_DATA[i].slug
-    )}`;
+function parseSortDate(value) {
+  const [year, month] = String(value).split("/").map(Number);
+  return year * 12 + month;
+}
 
+// 制作日の古い順に並べる
+const sortedWorks = [...WORKS_DATA].sort((a, b) => {
+  return parseSortDate(a.sortDate) - parseSortDate(b.sortDate);
+});
+
+// 現在の作品が制作順で何番目か取得
+const sortedIndex = sortedWorks.findIndex(
+  item => item.slug === slug
+);
+
+function detailUrl(item) {
+  return `work.html?slug=${encodeURIComponent(item.slug)}`;
+}
+
+function setPager() {
+
+  const prev =
+    sortedIndex > 0
+      ? sortedWorks[sortedIndex - 1]
+      : null;
+
+  const next =
+    sortedIndex < sortedWorks.length - 1
+      ? sortedWorks[sortedIndex + 1]
+      : null;
+
+  setBottom(
+    "bottom-prev",
+    prev
+  );
+
+  setBottom(
+    "bottom-next",
+    next
+  );
+}
+
+function setBottom(id, item) {
+
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  if (!item) {
+    element.style.visibility = "hidden";
+    return;
   }
 
+  element.href =
+    detailUrl(item);
 
-  function setPager() {
+  const strong =
+    element.querySelector("strong");
 
-    const prev =
-      index > 0
-        ? WORKS_DATA[index - 1]
-        : null;
-
-
-    const next =
-      index < WORKS_DATA.length - 1
-        ? WORKS_DATA[index + 1]
-        : null;
-
-
-    setBottom(
-      "bottom-next",
-      next,
-      index + 1
-    );
-
-
-    setBottom(
-      "bottom-prev",
-      prev,
-      index - 1
-    );
-
+  if (strong) {
+    strong.textContent =
+      item.title;
   }
+}
 
-
-  function setBottom(id, item, i) {
-
-    const element =
-      document.getElementById(id);
-
-
-    if (!element) return;
-
-
-    if (!item) {
-
-      element.style.visibility =
-        "hidden";
-
-      return;
-
-    }
-
-
-    element.href =
-      detailUrl(i);
-
-
-    const strong =
-      element.querySelector("strong");
-
-
-    if (strong) {
-
-      strong.textContent =
-        item.title;
-
-    }
-
-  }
-
-
-  setPager();
+setPager();
 
 
   // --------------------------------
