@@ -91,7 +91,7 @@ const WORKS_DATA = [
     "slug": "06_ansute",
     "title": "あんステTSF 特設サイト",
     "yearLabel": "2017/11 - 2018/1",
-    "sortDate": "2017-11",
+    "sortDate": "2017/11",
     "category": [
       "web"
     ],
