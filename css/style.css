@@ -666,10 +666,10 @@ main {
 
 .work-navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 
@@ -718,7 +718,7 @@ main {
   text-decoration: none;
 
   /* 矢印の見た目を中央に補正 */
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 
   transition:
     background .2s,
