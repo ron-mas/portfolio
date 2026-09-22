@@ -718,7 +718,7 @@ main {
   text-decoration: none;
 
   /* 矢印の見た目を中央に補正 */
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 
   transition:
     background .2s,
