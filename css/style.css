@@ -191,6 +191,8 @@ main {
 
   color: #6c7c81;
 
+  font-size: 14px;
+
   cursor: pointer;
 
   transition: .2s;
@@ -217,7 +219,7 @@ main {
 
   color: var(--muted);
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .sort select {
@@ -1104,6 +1106,8 @@ main {
 
   padding: 0 14px;
 
+  font-size: 13px;
+
   white-space: nowrap;
 }
 
@@ -1120,7 +1124,7 @@ main {
 
   white-space: nowrap;
 
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .sort select {
