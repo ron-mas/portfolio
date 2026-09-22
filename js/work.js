@@ -72,20 +72,20 @@ if (work.title.startsWith("「")) {
 
 
   // --------------------------------
-  // 前後の実績
-  // --------------------------------
+// 前後の実績
+// --------------------------------
 
 function parseSortDate(value) {
   const [year, month] = String(value).split("/").map(Number);
   return year * 12 + month;
 }
 
-// 制作日の古い順に並べる
+// 一覧ページと同じ「新しい順」
 const sortedWorks = [...WORKS_DATA].sort((a, b) => {
-  return parseSortDate(a.sortDate) - parseSortDate(b.sortDate);
+  return parseSortDate(b.sortDate) - parseSortDate(a.sortDate);
 });
 
-// 現在の作品が制作順で何番目か取得
+// 現在の作品の位置
 const sortedIndex = sortedWorks.findIndex(
   item => item.slug === slug
 );
@@ -96,14 +96,16 @@ function detailUrl(item) {
 
 function setPager() {
 
+  // 一覧で現在の作品より1つ下 = 次の実績
   const next =
-    sortedIndex > 0
-      ? sortedWorks[sortedIndex - 1]
-      : null;
-
-  const prev =
     sortedIndex < sortedWorks.length - 1
       ? sortedWorks[sortedIndex + 1]
+      : null;
+
+  // 一覧で現在の作品より1つ上 = 前の実績
+  const prev =
+    sortedIndex > 0
+      ? sortedWorks[sortedIndex - 1]
       : null;
 
   setBottom(
