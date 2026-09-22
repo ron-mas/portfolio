@@ -76,18 +76,21 @@ function renderWorks() {
     // Sort
     // --------------------------------
 
-    items.sort((a, b) => {
+    function parseSortDate(value) {
+  const [year, month] = String(value).split("/").map(Number);
+  return year * 12 + month;
+}
 
-      const dateA = a.sortDate || "";
-      const dateB = b.sortDate || "";
+items.sort((a, b) => {
+  const dateA = parseSortDate(a.sortDate);
+  const dateB = parseSortDate(b.sortDate);
 
-      if (order === "new") {
-        return dateB.localeCompare(dateA);
-      }
+  if (order === "new") {
+    return dateB - dateA;
+  }
 
-      return dateA.localeCompare(dateB);
-    });
-
+  return dateA - dateB;
+});
 
     // --------------------------------
     // Render
