@@ -833,19 +833,21 @@ main {
 .profile-avatar {
   aspect-ratio: 1;
 
-  display: grid;
-
-  place-items: center;
+  overflow: hidden;
 
   border-radius: 18px;
 
   background: #eaf3f5;
+}
 
-  color: var(--key-dark);
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
 
-  letter-spacing: .15em;
+  display: block;
 
-  font-family: "DM Sans";
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-list {
