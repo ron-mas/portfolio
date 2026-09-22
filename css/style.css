@@ -1099,9 +1099,9 @@ main {
 
   flex: 0 0 auto;
 
-  padding: 0 14px;
+  padding: 0 12px;
 
-  font-size: 13px;
+  font-size: 14px;
 
   white-space: nowrap;
 }
@@ -1119,15 +1119,15 @@ main {
 
   white-space: nowrap;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .sort select {
   height: 34px;
 
-  padding: 0 11px;
+  padding: 0 12px;
 
-  font-size: 11px;
+  font-size: 14px;
 }
 
   .works-grid {
