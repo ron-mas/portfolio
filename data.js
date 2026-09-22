@@ -101,4 +101,21 @@ const WORKS_DATA = [
     "tools": "Photoshop / Illustrator / Animate",
     "areas": "webデザイン / 画像制作 / ガチャ演出 / 企画 / ディレクション",
   },
+
+    // 07_osokyu1
+    
+    {
+    "slug": "07_osokyu1",
+    "title": "『おそ急さん』ティザーサイト",
+    "yearLabel": "2016/1 - 2016/3",
+    "sortDate": "2016/1",
+    "category": [
+      "web"
+    ],
+    "thumbnail": "assets/07_osokyu1/07_1.png",
+    "overview": "2016年度に実施された、東急電鉄と『おそ松さん』のコラボレーション施策のティザーサイトです。\n6つ子が東急電鉄の各路線のプロモーションを担当するというコラボレーションのストーリーを社内全体で考案し、\nコラボレーションの認知拡散を目的としたランディングページの制作と、Twitterおよび横浜・渋谷の駅構内で公開するティザー動画の制作を担当しました。",
+    "company": "re-vue合同会社 / 東急電鉄株式会社",
+    "tools": "Photoshop / Illustrator / Flash",
+    "areas": "webデザイン / ロゴ制作 / 動画制作 / 企画",
+  },
 ]
