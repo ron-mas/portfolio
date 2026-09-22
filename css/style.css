@@ -813,12 +813,9 @@ main {
 
 .profile-intro {
   display: grid;
-
-  grid-template-columns:
-    260px 1fr;
+  grid-template-columns: 180px 1fr;
 
   gap: 50px;
-
   align-items: center;
 
   padding: 35px;
@@ -826,12 +823,12 @@ main {
   background: #fff;
 
   border: 1px solid var(--line);
-
   border-radius: var(--radius);
 }
 
 .profile-avatar {
-  aspect-ratio: 1;
+  width: 180px;
+  height: 180px;
 
   overflow: hidden;
 
