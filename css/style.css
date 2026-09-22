@@ -665,24 +665,24 @@ main {
 .work-pager {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 18px;
 
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 .work-pager a {
-  min-height: 120px;
+  min-height: 72px;
 
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
 
-  padding: 24px 34px;
+  padding: 14px 18px;
 
   background: #fff;
 
   border: 1px solid var(--key);
-  border-radius: 22px;
+  border-radius: 14px;
 
   transition:
     border-color .2s,
@@ -713,7 +713,7 @@ main {
 
   color: var(--key);
 
-  font-size: 30px;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -723,7 +723,7 @@ main {
 .work-pager strong {
   display: block;
 
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -745,27 +745,27 @@ main {
 
   .work-pager {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
   .work-pager a {
-    min-height: 90px;
+    min-height: 64px;
 
-    gap: 10px;
+    gap: 8px;
 
-    padding: 16px;
+    padding: 12px;
 
-    border-radius: 16px;
+    border-radius: 12px;
   }
 
   .work-pager strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .pager-arrow {
-    font-size: 20px;
+    font-size: 13px;
   }
 
 }
