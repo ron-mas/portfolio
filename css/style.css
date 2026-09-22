@@ -718,7 +718,7 @@ main {
   text-decoration: none;
 
   /* 矢印の見た目を中央に補正 */
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 
   transition:
     background .2s,
@@ -1075,6 +1075,11 @@ main {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+
+   
+.work-navigation {
+  -webkit-overflow-scrolling: touch;
+    }
 
 
 /* カテゴリ：1列で横スクロール */
