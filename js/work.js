@@ -75,10 +75,6 @@ if (work.title.startsWith("「")) {
   // 前後の実績
   // --------------------------------
 
-  // --------------------------------
-// 前後の実績
-// --------------------------------
-
 function parseSortDate(value) {
   const [year, month] = String(value).split("/").map(Number);
   return year * 12 + month;
@@ -100,24 +96,24 @@ function detailUrl(item) {
 
 function setPager() {
 
-  const prev =
+  const next =
     sortedIndex > 0
       ? sortedWorks[sortedIndex - 1]
       : null;
 
-  const next =
+  const prev =
     sortedIndex < sortedWorks.length - 1
       ? sortedWorks[sortedIndex + 1]
       : null;
 
   setBottom(
-    "bottom-prev",
-    prev
+    "bottom-next",
+    next
   );
 
   setBottom(
-    "bottom-next",
-    next
+    "bottom-prev",
+    prev
   );
 }
 
