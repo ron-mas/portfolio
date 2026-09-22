@@ -643,73 +643,63 @@ main {
 
 .work-pager {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
 
   margin-top: 90px;
-
   padding-top: 25px;
 
   border-top: 1px solid var(--line);
 }
 
 .work-pager a {
-  min-height: 70px;
+  min-height: 120px;
 
-  display: grid;
-
-  grid-template-columns:
-    auto 1fr;
-
+  display: flex;
   align-items: center;
+  gap: 24px;
 
-  gap: 14px;
-
-  padding: 15px 18px;
+  padding: 24px 34px;
 
   background: #fff;
 
-  border: 1px solid var(--line);
+  border: 1px solid var(--key);
+  border-radius: 22px;
 
-  border-radius: 12px;
+  transition:
+    border-color .2s,
+    background .2s;
 }
 
 .work-pager .pager-prev {
-  grid-template-columns:
-    1fr auto;
+  justify-content: flex-start;
+  text-align: left;
+}
 
+.work-pager .pager-next {
+  justify-content: flex-end;
   text-align: right;
 }
 
 .pager-arrow {
-  font-size: 25px;
+  flex-shrink: 0;
 
+  color: var(--key);
+  font-size: 30px;
   line-height: 1;
-}
-
-.work-pager small {
-  display: block;
-
-  color: var(--muted);
-
-  font-size: 10px;
 }
 
 .work-pager strong {
   display: block;
 
-  font-size: 12px;
-
-  font-weight: 500;
-
-  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .work-pager a:hover {
-  border-color: var(--key);
+  border-color: var(--key-dark);
+  background: #f8fbfc;
 }
 
 
