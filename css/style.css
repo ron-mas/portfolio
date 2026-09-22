@@ -1030,9 +1030,9 @@ main {
 
   main {
   padding:
-    20px
+    16px
     18px
-    60px;
+    24px;
 }
 
   .site-header {
@@ -1043,6 +1043,8 @@ main {
 
   .site-header nav {
     gap: 18px;
+    position:sticky;
+     top:0;
   }
 
   /* WORKS */
