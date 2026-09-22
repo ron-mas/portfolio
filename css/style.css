@@ -1085,7 +1085,7 @@ main {
   display: flex;
   flex-wrap: nowrap;
 
-  gap: 7px;
+  gap: 6px;
 
   overflow-x: auto;
   overflow-y: hidden;
