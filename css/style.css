@@ -811,6 +811,55 @@ main {
    PROFILE
 ======================================== */
 
+/* Keep the ambient light behind the content and out of pointer interaction. */
+body:has(.profile-card) {
+  isolation: isolate;
+}
+
+body:has(.profile-card)::before,
+body:has(.profile-card)::after {
+  content: "";
+  position: fixed;
+  inset: -6vmax;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  transform-origin: center;
+}
+
+body:has(.profile-card)::before {
+  background:
+    radial-gradient(ellipse at 12% 24%, rgba(133, 177, 166, .19), transparent 34%),
+    radial-gradient(ellipse at 83% 66%, rgba(128, 165, 177, .17), transparent 36%),
+    radial-gradient(ellipse at 44% 94%, rgba(150, 185, 169, .12), transparent 30%);
+  animation: profile-shade-drift 29s ease-in-out infinite alternate;
+}
+
+body:has(.profile-card)::after {
+  background:
+    radial-gradient(ellipse at 21% 18%, rgba(255, 246, 203, .44), transparent 29%),
+    radial-gradient(ellipse at 76% 40%, rgba(255, 255, 247, .72), transparent 32%),
+    radial-gradient(ellipse at 35% 78%, rgba(255, 248, 217, .32), transparent 27%);
+  animation: profile-light-drift 23s ease-in-out infinite alternate;
+}
+
+@keyframes profile-shade-drift {
+  from { transform: translate(-1.5%, -1%) rotate(-2deg) scale(1.02); opacity: .65; }
+  to { transform: translate(1.5%, 1%) rotate(2deg) scale(1.06); opacity: 1; }
+}
+
+@keyframes profile-light-drift {
+  from { transform: translate(1%, -1.5%) scale(1.04); opacity: .7; }
+  to { transform: translate(-1.5%, 1.5%) scale(1.08); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(.profile-card)::before,
+  body:has(.profile-card)::after {
+    animation: none;
+  }
+}
+
 .profile-card {
   position: relative;
   width: min(100%, 1000px);
@@ -818,7 +867,6 @@ main {
   padding: 40px;
   background: var(--white);
   box-shadow: 0 20px 45px rgba(92, 132, 143, .14);
-  border-radius: 40px;
 }
 
 .site-header nav {
