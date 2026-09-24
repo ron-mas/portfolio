@@ -869,7 +869,9 @@ main {
 .career-timeline li::before {
   content: "";
   position: absolute;
-  left: -27px;
+  left: -23px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
   top: 6px;
   width: 7px;
   height: 7px;
@@ -882,7 +884,8 @@ main {
 .career-timeline li:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: -24px;
+  left: -23px;
+  transform: translateX(-50%);
   top: 10px;
   bottom: -10px;
   width: 1px;
