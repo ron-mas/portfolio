@@ -1584,3 +1584,17 @@ main {
 
   background-position: 0 0;
 }
+
+
+/* 木漏れ日を背景の前、コンテンツの後ろに配置 */
+body {
+  isolation: isolate;
+}
+
+.komorebi-overlay {
+  z-index: -1;
+}
+
+.password-screen {
+  background: transparent;
+}
