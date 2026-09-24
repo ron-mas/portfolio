@@ -1153,7 +1153,7 @@ main {
   font-size: 48px;
   font-weight: 400;
 
-  color: var(--key-dark);
+  color: var(--key);
 }
 
 .password-box p:not(.eyebrow):not(.error) {
@@ -1193,7 +1193,7 @@ main {
 
   border-radius: 9px;
 
-  background: #4f6971;
+  background: var(--key);
 
   color: #fff;
 
