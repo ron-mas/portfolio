@@ -481,6 +481,8 @@ main {
   font-size: 12px;
 
   line-height: 2;
+
+  white-space: pre-line;
 }
 
 
@@ -582,6 +584,8 @@ main {
   font-size: 14px;
 
   line-height: 2.1;
+
+  white-space: pre-line;
 }
 
 
@@ -1144,7 +1148,7 @@ main {
   font-size: 48px;
   font-weight: 400;
 
-  color: var(--key);
+  color: var(--key-dark);
 }
 
 .password-box p:not(.eyebrow):not(.error) {
@@ -1184,7 +1188,7 @@ main {
 
   border-radius: 9px;
 
-  background: var(--key);
+  background: #4f6971;
 
   color: #fff;
 
@@ -1401,7 +1405,7 @@ main {
   .work-info {
     grid-template-columns: 1fr;
 
-    gap: 10px;
+    gap: 12px;
   }
 
   .work-info-column {
@@ -1411,7 +1415,7 @@ main {
   .work-info-column + .work-info-column {
     padding-left: 0;
 
-    padding-top: 0;
+    padding-top: 12px;
 
     border-left: 0;
 
@@ -1583,22 +1587,4 @@ main {
   background-size: 20% 25%;
 
   background-position: 0 0;
-}
-
-
-/* 木漏れ日を背景の前、コンテンツの後ろに配置 */
-body {
-  isolation: isolate;
-}
-
-.komorebi-overlay {
-  z-index: -1;
-}
-
-.password-screen {
-  background: transparent;
-}
-
-body:not(.locked):has(.works-page) .komorebi-overlay {
-  display: none;
 }
