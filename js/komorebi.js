@@ -7,12 +7,20 @@
 
   function drift() {
     if (reducedMotion.matches) return;
-    const x = (Math.random() * 5 - 2.5).toFixed(3);
-    const y = (Math.random() * 5 - 2.5).toFixed(3);
+    
+    const x = (Math.random() * 8 - 4).toFixed(3);
+    const y = (Math.random() * 8 - 4).toFixed(3);
+    
     const next = `translate(${x}vmax, ${y}vmax)`;
     animation = layer.animate(
       [{ transform: position }, { transform: next }],
-      { duration: 10000 + Math.random() * 5000, easing: 'ease-in-out', fill: 'forwards' }
+      
+      {
+  duration: 24000 + Math.random() * 12000,
+  easing: 'linear',
+  fill: 'forwards'
+}
+      
     );
     animation.onfinish = () => {
       position = next;
