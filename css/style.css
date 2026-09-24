@@ -1598,3 +1598,7 @@ body {
 .password-screen {
   background: transparent;
 }
+
+body:not(.locked):has(.works-page) .komorebi-overlay {
+  display: none;
+}
