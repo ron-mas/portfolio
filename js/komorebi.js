@@ -16,7 +16,7 @@
       [{ transform: position }, { transform: next }],
       
       {
-  duration: 24000 + Math.random() * 12000,
+  duration: 5000 + Math.random() * 1000,
   easing: 'linear',
   fill: 'forwards'
 }
