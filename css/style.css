@@ -1405,7 +1405,7 @@ main {
   .work-info {
     grid-template-columns: 1fr;
 
-    gap: 12px;
+    gap: 0px;
   }
 
   .work-info-column {
@@ -1415,7 +1415,7 @@ main {
   .work-info-column + .work-info-column {
     padding-left: 0;
 
-    padding-top: 12px;
+    padding-top: 10px;
 
     border-left: 0;
 
