@@ -811,78 +811,16 @@ main {
    PROFILE
 ======================================== */
 
-/* Dappled sunlight: soft patches sway independently over a neutral shade. */
-body:has(.profile-card) {
-  isolation: isolate;
-  background: #edf2f1;
-}
-
-body:has(.profile-card)::before,
-body:has(.profile-card)::after {
-  content: "";
+/* The supplied image is composited at exactly 20% multiply. */
+.komorebi-overlay {
   position: fixed;
-  inset: -10vmax;
-  z-index: -1;
+  inset: -8vmax;
+  z-index: 60;
   pointer-events: none;
-  background-repeat: no-repeat;
-}
-
-body:has(.profile-card)::before {
-  background:
-    radial-gradient(ellipse 13vw 8vh at 4% 12%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 9vw 12vh at 22% 4%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 14vw 7vh at 38% 18%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 9vw 6vh at 62% 8%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 15vw 9vh at 83% 19%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 8vw 13vh at 98% 5%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 7vw 13vh at 10% 44%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 12vw 6vh at 27% 35%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 10vw 8vh at 49% 48%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 15vw 7vh at 72% 39%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 9vw 12vh at 94% 49%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 12vw 7vh at 3% 74%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 8vw 12vh at 24% 68%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 14vw 8vh at 42% 82%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 9vw 6vh at 66% 70%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 15vw 9vh at 84% 81%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 12vw 8vh at 99% 95%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 10vw 9vh at 15% 99%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%),
-    radial-gradient(ellipse 11vw 7vh at 56% 100%, rgba(255, 255, 249, .94) 0%, rgba(255, 255, 249, .72) 30%, transparent 74%);
-  filter: blur(14px);
-  animation: profile-light-drift 24s ease-in-out infinite alternate;
-}
-
-body:has(.profile-card)::after {
-  background:
-    radial-gradient(ellipse 16vw 9vh at 8% 25%, rgba(104, 131, 130, .19), transparent 78%),
-    radial-gradient(ellipse 12vw 20vh at 28% 63%, rgba(110, 134, 131, .16), transparent 78%),
-    radial-gradient(ellipse 18vw 11vh at 71% 12%, rgba(108, 129, 131, .18), transparent 78%),
-    radial-gradient(ellipse 12vw 17vh at 93% 62%, rgba(104, 131, 130, .2), transparent 78%),
-    radial-gradient(ellipse 17vw 9vh at 65% 88%, rgba(110, 134, 131, .16), transparent 78%);
-  filter: blur(20px);
-  animation: profile-shade-drift 31s ease-in-out -9s infinite alternate;
-}
-
-@keyframes profile-light-drift {
-  0% { transform: translate(-1%, -.7%) rotate(-1deg) scale(1.02); opacity: .75; }
-  45% { transform: translate(.5%, .9%) rotate(.6deg) scale(1.045); opacity: 1; }
-  100% { transform: translate(1.2%, -.3%) rotate(1.4deg) scale(1.02); opacity: .85; }
-}
-
-@keyframes profile-shade-drift {
-  0% { transform: translate(1%, -.6%) rotate(1deg); opacity: .8; }
-  55% { transform: translate(-.8%, .8%) rotate(-1.2deg); opacity: 1; }
-  100% { transform: translate(-1.3%, -.4%) rotate(-.3deg); opacity: .7; }
-}
-
-@media (max-width: 600px) {
-  body:has(.profile-card)::before { filter: blur(9px); }
-  body:has(.profile-card)::after { filter: blur(14px); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body:has(.profile-card)::before,
-  body:has(.profile-card)::after { animation: none; }
+  background: url("../assets/komorebi.png") center / cover no-repeat;
+  opacity: .2;
+  mix-blend-mode: multiply;
+  transform: translate(0, 0);
 }
 
 .profile-card {
