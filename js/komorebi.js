@@ -12,7 +12,7 @@
     const next = `translate(${x}vmax, ${y}vmax)`;
     animation = layer.animate(
       [{ transform: position }, { transform: next }],
-      { duration: 16000 + Math.random() * 10000, easing: 'ease-in-out', fill: 'forwards' }
+      { duration: 10000 + Math.random() * 5000, easing: 'ease-in-out', fill: 'forwards' }
     );
     animation.onfinish = () => {
       position = next;
