@@ -815,41 +815,6 @@ main {
    PROFILE
 ======================================== */
 
-/* Suncatcher light: behind cards and header. */
-.prism-light {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.prism-particle {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--width);
-  height: var(--height);
-  border-radius: 50%;
-  background: linear-gradient(110deg,
-    transparent 0%, rgba(247, 149, 203, .65) 20%,
-    rgba(255, 217, 146, .7) 37%, rgba(255, 255, 255, .95) 48%,
-    rgba(156, 231, 220, .7) 62%, rgba(153, 184, 246, .65) 80%, transparent 100%);
-  filter: blur(3px);
-  opacity: 0;
-  transform: rotate(var(--angle));
-  animation: prism-glow var(--duration) ease-in-out var(--delay) infinite;
-}
-@keyframes prism-glow {
-  0%, 15%, 100% { opacity: 0; transform: translate(-5px, 4px) rotate(var(--angle)); }
-  45%, 55% { opacity: var(--peak); transform: translate(5px, -4px) rotate(var(--angle)); }
-  85% { opacity: 0; transform: translate(8px, -6px) rotate(var(--angle)); }
-}
-body.prism-paused .prism-particle { animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce) {
-  .prism-particle { animation: none; opacity: .18; }
-}
-
-
 .profile-card {
   z-index: 1;
   position: relative;
@@ -1616,4 +1581,5 @@ body.prism-paused .prism-particle { animation-play-state: paused; }
 
   background-position: 0 0;
 }
+
 
