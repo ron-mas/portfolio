@@ -24,57 +24,82 @@
 
   <main>
 
-    <section class="profile-page">
+    <article class="profile-card">
+      <a class="profile-mail" href="mailto:" aria-label="メールを作成" title="メールを作成">
+        <svg width="50" height="35" viewBox="0 0 50 35" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="48" height="33" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="m5 5 20 13L45 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
 
       <div class="profile-intro">
-
         <div class="profile-avatar">
-  <img src="assets/icon.jpg" alt="プロフィール写真">
-</div>
-
-        <div>
-          <dl class="profile-list">
-
-            <div>
-              <dt>名前</dt>
-              <dd>小峰 真澄</dd>
-            </div>
-
-            <div>
-              <dt>職種</dt>
-              <dd>デザイナー / ディレクター</dd>
-            </div>
-
-            <div>
-              <dt>拠点</dt>
-              <dd>東京</dd>
-            </div>
-
-          </dl>
+          <img src="assets/icon.jpg" alt="小峰真澄のプロフィール写真">
         </div>
 
+        <div class="profile-copy">
+          <h1>小峰　真澄</h1>
+          <p class="profile-name-en">Masumi Komine</p>
+          <p class="profile-role">デザイナー / ディレクター</p>
+          <p class="profile-description">
+            web・広告・グッズのデザイン、アプリのイラスト制作などを手がけてきました。<br>
+            現在は自社サービスの運用・開発でディレクションも担当しています。
+          </p>
+        </div>
       </div>
 
+      <div class="profile-divider" aria-hidden="true"></div>
 
-      <section class="profile-section">
+      <div class="profile-details">
+      <div class="profile-details-main">
+      <section class="profile-section" aria-labelledby="skills-title">
+        <h2 id="skills-title">SKILLS</h2>
 
-        <h2>SKILLS</h2>
-
-        <div class="tags">
-          <span>Adobe Illustrator</span>
-          <span>Adobe Photoshop</span>
+        <div class="tags tags-tools" aria-label="使用ツール">
+          <span>Photoshop</span>
+          <span>Illustrator</span>
           <span>Figma</span>
-          <span>Illustration</span>
-          <span>Graphic Design</span>
+          <span>CLIP STUDIO PAINT</span>
+        </div>
+
+        <div class="tags tags-skills" aria-label="スキル">
           <span>Web Design</span>
+          <span>Graphic Design</span>
+          <span>illustration</span>
           <span>Goods Design</span>
           <span>Planning</span>
           <span>Direction</span>
         </div>
-
       </section>
 
-    </section>
+      <section class="profile-section profile-interests" aria-labelledby="interests-title">
+        <h2 id="interests-title">INTERESTS</h2>
+
+        <div class="tags tags-interests">
+          <span>ゲーム</span>
+          <span>アイドル</span>
+          <span>Vtuber</span>
+          <span>キャラクター</span>
+          <span>ファッション</span>
+          <span>音楽</span>
+        </div>
+      </section>
+
+      </div>
+      <section class="profile-section profile-career" aria-labelledby="career-title">
+        <h2 id="career-title">CAREER</h2>
+        <ol class="career-timeline">
+          <li>東京デザイン専門学校</li>
+          <li>株式会社カヤック</li>
+          <li>株式会社cocone</li>
+          <li>re-vue合同会社</li>
+          <li>株式会社miHoYo</li>
+          <li>re-vue合同会社</li>
+        </ol>
+      </section>
+      </div>
+
+    </article>
 
   </main>
 
