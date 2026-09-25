@@ -161,7 +161,7 @@ const WORKS_DATA = [
     "yearLabel": "2016/6 - 2016/9",
     "sortDate": "2016/6",
     "category": [
-      "web"
+      "web",
       "goods"
     ],
     "thumbnail": "assets/10_osokyu4/10_1.png",
