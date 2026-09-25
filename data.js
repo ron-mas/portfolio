@@ -119,7 +119,7 @@ const WORKS_DATA = [
     "areas": "webデザイン / ロゴ制作 / 動画制作 / 企画",
   },
 
-        // 08_osokyu2
+    // 08_osokyu2
     
     {
     "slug": "08_osokyu2",
@@ -136,7 +136,7 @@ const WORKS_DATA = [
     "areas": "グラフィックデザイン",
   },
 
-        // 09_osokyu3
+    // 09_osokyu3
     
     {
     "slug": "09_osokyu3",
@@ -153,7 +153,7 @@ const WORKS_DATA = [
     "areas": "グラフィックデザイン",
   },
 
-        // 10_osokyu4
+    // 10_osokyu4
     
     {
     "slug": "10_osokyu4",
@@ -169,5 +169,5 @@ const WORKS_DATA = [
     "company": "re-vue合同会社 / 東急電鉄株式会社",
     "tools": "Photoshop / Illustrator",
     "areas": "webデザイン / グラフィックデザイン",
-  },
+  }
 ]
