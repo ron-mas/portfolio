@@ -192,7 +192,7 @@ const WORKS_DATA = [
     
     {
     "slug": "12_osokyu6",
-    "title": "『おそ急さんでしたキャンペーン』車内広告ジャック・グッズ",
+    "title": "『おそ急さんでしたキャンペーン』車内広告・グッズ",
     "yearLabel": "2017/1 - 2017/3",
     "sortDate": "2017/1",
     "category": [
