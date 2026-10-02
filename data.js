@@ -184,7 +184,7 @@ const WORKS_DATA = [
     "thumbnail": "assets/11_osokyu5/11_0.png",
     "overview": "2016年12月の物販イベント「おそ急フェス」に向けて、アクリルキーホルダー、パスケース、トートバッグ、卓上カレンダー、缶バッジを制作しました。\n描き下ろしイラストや各路線のカラーを生かし、アイテムごとの使いやすさにも配慮しながら、「おそ急さん」らしいカラフルで楽しいデザインに仕上げました。\nトートバッグでは、各路線の電車のイラストを手描き風に描き下ろし、普段使いしやすいデザインを目指しました。",
     "company": "re-vue合同会社 / 東急電鉄株式会社",
-    "tools": "Photoshop / Illustrator / CLIP STUDIO",
+    "tools": "Photoshop / Illustrator / CLIP STUDIO PAINT",
     "areas": "グラフィックデザイン",
   },
 
@@ -201,7 +201,7 @@ const WORKS_DATA = [
     "thumbnail": "assets/12_osokyu6/12_0.png",
     "overview": "「おそ急さん」コラボの最後を飾るキャンペーンで、こどもの国線の車内広告ジャックに使用する広告10種類と、配布・販売用グッズを制作しました。\n車内広告では雑誌や塾など身近な広告を各キャラクターに合わせてパロディ化。グッズでは、切符と交換するノベルティ缶バッジのほか、\n缶バッジ・シール・クリアファイルをセットにした「忘れ物グッズ」を展開しました。\nクリアファイルの裏面には退職届をあしらい、筆跡や紙の折り目まで表現しています。",
     "company": "re-vue合同会社 / 東急電鉄株式会社",
-    "tools": "Photoshop / Illustrator / CLIP STUDIO",
+    "tools": "Photoshop / Illustrator / CLIP STUDIO PAINT",
     "areas": "グラフィックデザイン",
   },
 
@@ -218,7 +218,58 @@ const WORKS_DATA = [
     "thumbnail": "assets/13_gintama/13_1.png",
     "overview": "「銀魂スタンプラリー ～スタンプラリーやるときはインクの乾きに気をつけろ～」\n東急目黒線・日吉駅の「虚球自像」をきっかけに実現した、東急電鉄×銀魂のコラボスタンプラリーです。\n書き下ろしイラストの提案をはじめ、ポスター、1日乗車券、スタンプラリー帳、スタンプ台ポスター、ARフォトフレームなど、イベント全体のグラフィック制作を担当しました。\n銀魂の世界観に合わせ、和紙や筆文字、桜などの和モチーフと、紺・金を中心とした落ち着いた配色で統一しています。\nまた、物販イベントでは缶バッジ・アクリルキーホルダーのアートディレクション、クリアファイルのデザインも担当しました。",
     "company": "re-vue合同会社 / 東急電鉄株式会社",
-    "tools": "Photoshop / Illustrator / CLIP STUDIO",
-    "areas": "グラフィックデザイン",
-  }
+    "tools": "Photoshop / Illustrator / CLIP STUDIO PAINT",
+    "areas": "グラフィックデザイン / グッズデザイン",
+  },
+
+     // 14_reparisu
+    
+    {
+    "slug": "14_reparisu",
+    "title": "レオパレスPRキャンペーン",
+    "yearLabel": "2017/9 - 2017/10",
+    "sortDate": "2017/9",
+    "category": [
+     "web"
+    ],
+    "thumbnail": "assets/14_reparisu/14_1.png",
+    "overview": "「レオパリスくんの消えたおもちゃを探せ！」\n株式会社レオパレスのPR施策として実施された、SNSやLINEを活用した謎解きキャンペーンです。\nLPデザインをはじめ、LINEで使用する謎解き画像やバナー、キャラクター「レオパリスくん」たちの探偵衣装のデザインを担当しました。\nLPはエッシャーのだまし絵をイメージし、謎解きの世界観に合わせた不思議さのあるビジュアルに仕上げています。",
+    "company": "re-vue合同会社 / 株式会社レオパレス",
+    "tools": "Photoshop / Illustrator",
+    "areas": "webデザイン / 衣装イラスト",
+  },
+
+    // 15_capten
+    
+    {
+    "slug": "15_capten",
+    "title": "「キャプテン」Lobi・LINEスタンプ",
+    "yearLabel": "2017/6 - 2017/7",
+    "sortDate": "2017/6",
+    "category": [
+     "illustration"
+    ],
+    "thumbnail": "assets/15_capten/15_1.png",
+    "overview": "野球漫画「キャプテン」のLobiスタンプおよびLINEスタンプの制作を担当しました。\n作中のセリフや日常で使いやすい言葉を選び、それぞれの内容に合わせてキャラクターをデフォルメして描き起こしました。\nLobiスタンプはゲーム版と通常版の2種類、LINEスタンプは全絵柄をまとめたセットとして展開されています。",
+    "company": "re-vue合同会社",
+    "tools": "Photoshop / CLIP STUDIO PAINT",
+    "areas": "イラストレーション",
+  },
+
+    // 16_gurimoa
+    
+    {
+    "slug": "16_gurimoa",
+    "title": "「グリモア～私立グリモワール魔法学園～」ミニモア アバターイラスト",
+    "yearLabel": "2017/1 - 2018/9",
+    "sortDate": "2017/1",
+    "category": [
+     "illustration"
+    ],
+    "thumbnail": "assets/16_gurimoa/16_1.png",
+    "overview": "業務委託として継続的に担当した、アバター「ミニモア」のイラスト制作です。\nキャラクターが使用するアイテムをはじめ、それに付随する演出用イラストなど、ゲーム内で使用する各種アバター素材を毎月制作しました。",
+    "company": "フリーランス / 株式会社アプリボット",
+    "tools": "Illustrator / CLIP STUDIO PAINT",
+    "areas": "イラストレーション",
+  },
 ]
