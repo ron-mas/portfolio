@@ -544,7 +544,7 @@ main {
 .work-info-item dt {
   color: var(--key-dark);
 
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .work-info-item dd {
@@ -584,6 +584,8 @@ main {
   font-size: 14px;
 
   line-height: 2.1;
+
+  text-align: center;
 
   white-space: pre-line;
 }
@@ -1581,5 +1583,6 @@ main {
 
   background-position: 0 0;
 }
+
 
 
