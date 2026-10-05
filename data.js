@@ -196,7 +196,8 @@ const WORKS_DATA = [
     "yearLabel": "2017/1 - 2017/3",
     "sortDate": "2017/1",
     "category": [
-     "goods"
+     "goods",
+     "advertising"
     ],
     "thumbnail": "assets/12_osokyu6/12_0.png",
     "overview": "「おそ急さん」コラボの最後を飾るキャンペーンで、こどもの国線の車内広告ジャックに使用する広告10種類と、配布・販売用グッズを制作しました。\n車内広告では雑誌や塾など身近な広告を各キャラクターに合わせてパロディ化。グッズでは、切符と交換するノベルティ缶バッジのほか、\n缶バッジ・シール・クリアファイルをセットにした「忘れ物グッズ」を展開しました。\nクリアファイルの裏面には退職届をあしらい、筆跡や紙の折り目まで表現しています。",
@@ -287,7 +288,7 @@ const WORKS_DATA = [
     "overview": "",
     "company": "株式会社miHoYo",
     "tools": "Photoshop / CLIP STUDIO PAINT",
-    "areas": "",
+    "areas": "イラスト",
   },
 
     // 18_3rdkisekae
@@ -304,6 +305,94 @@ const WORKS_DATA = [
     "overview": "",
     "company": "株式会社miHoYo",
     "tools": "Photoshop",
-    "areas": "",
+    "areas": "グラフィックデザイン",
+  },
+
+    // 19_3rdadmati
+    
+    {
+    "slug": "19_3rdadmati",
+    "title": "崩壊3rd あど街っぷ キャンペーングッズ",
+    "yearLabel": "2019/11 - 2019/12",
+    "sortDate": "2019/11",
+    "category": [
+     "goods"
+    ],
+    "thumbnail": "assets/19_3rdadmati/19_1.png",
+    "overview": "あど街っぷと崩壊3rdのコラボキャンペーンにて、景品のアクリルマグネットのデザインを担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
+    "areas": "グラフィックデザイン",
+  },
+
+    // 20_3rdbanner
+    
+    {
+    "slug": "20_3rdbanner",
+    "title": "崩壊3rd バナー",
+    "yearLabel": "2019/4 - 2022/2",
+    "sortDate": "2019/4",
+    "category": [
+     "web",
+     "advertising"
+    ],
+    "thumbnail": "assets/20_3rdbanner/20_1.png",
+    "overview": "2019年〜2022年にかけて、「崩壊3rd」のキャンペーンバナーやアプリのSNS運用バナーを多数制作しました。\n本ページでは、制作物の一部を抜粋して掲載しています。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": "グラフィックデザイン",
+  },
+
+    // 21_3rd3rdad
+    
+    {
+    "slug": "21_3rd3rdad",
+    "title": "崩壊3rd 3周年広告",
+    "yearLabel": "2019/11 - 2019/12",
+    "sortDate": "2019/11",
+    "category": [
+     "advertising"
+    ],
+    "thumbnail": "assets/21_3rd3rdad/21_1.png",
+    "overview": "「崩壊3rd」3周年の屋外広告として、秋葉原ソフマップ壁面広告とJR秋葉原駅サイネージのデザインを担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
+    "areas": "グラフィックデザイン",
+  },
+
+    // 22_tgs2019
+    
+    {
+    "slug": "22_tgs2019",
+    "title": "TGS2019 miHoYoブース",
+    "yearLabel": "2019/5 - 2019/9",
+    "sortDate": "2019/5",
+    "category": [
+     "web",
+     "goods"
+    ],
+    "thumbnail": "assets/22_tgs2019/22_0.png",
+    "overview": "TGS2019のmiHoYoブース出展に関する制作物を一式担当しました。\n特設ページをはじめ、「崩壊3rd」「原神」の配布用チラシ、クリアファイル、アクリルスタンド、缶バッジ、Tシャツなどのノベルティを制作。\nブース整理券やTGSチケット背面に掲載する「原神」の広告デザインも担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
+    "areas": "グラフィックデザイン",
+  },
+
+    // 23_3rdxmas
+    
+    {
+    "slug": "23_3rdxmas",
+    "title": "崩壊3rd Twitterクリスマスボックスキャンペーン",
+    "yearLabel": "2019/11 - 2019/12",
+    "sortDate": "2019/11",
+    "category": [
+     "web",
+     "illustration"
+    ],
+    "thumbnail": "assets/23_3rdxmas/23_1.png",
+    "overview": "「崩壊3rd」Twitterクリスマスボックスキャンペーンにて、特設ページ、キャンペーンバナー、ハッシュフラッグ絵文字のイラスト制作を担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
+    "areas": "web / バナー / 絵文字イラスト",
   },
 ]
