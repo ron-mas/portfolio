@@ -272,4 +272,38 @@ const WORKS_DATA = [
     "tools": "Illustrator / CLIP STUDIO PAINT",
     "areas": "キャラ衣装・ポーズ / アイテム",
   },
+
+    // 17_3rdstamp
+    
+    {
+    "slug": "17_3rdstamp",
+    "title": "崩壊3rd LINE絵文字",
+    "yearLabel": "2019/9 - 2019/10",
+    "sortDate": "2019/9",
+    "category": [
+     "illustration"
+    ],
+    "thumbnail": "assets/17_3rdstamp/17_1.png",
+    "overview": "",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / CLIP STUDIO PAINT",
+    "areas": "",
+  },
+
+    // 18_3rdkisekae
+    
+    {
+    "slug": "18_3rdkisekae",
+    "title": "崩壊3rd LINE着せ替え",
+    "yearLabel": "2019/9 - 2019/11",
+    "sortDate": "2019/9",
+    "category": [
+     "goods"
+    ],
+    "thumbnail": "assets/18_3rdkisekae/18_1.png",
+    "overview": "",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": "",
+  },
 ]
