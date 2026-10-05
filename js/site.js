@@ -77,20 +77,22 @@ function renderWorks() {
     // --------------------------------
 
     function parseSortDate(value) {
-  const [year, month] = String(value).split("/").map(Number);
-  return year * 12 + month;
-}
+      const match = String(value).match(/(\d{4})\/(\d{1,2})/);
+      return match ? Number(match[1]) * 12 + Number(match[2]) : 0;
+    }
 
-items.sort((a, b) => {
-  const dateA = parseSortDate(a.sortDate);
-  const dateB = parseSortDate(b.sortDate);
+    function parseEndDate(work) {
+      const dates = [...String(work.yearLabel || "").matchAll(/(\d{4})\/(\d{1,2})/g)];
+      const end = dates.at(-1);
+      return end ? Number(end[1]) * 12 + Number(end[2]) : parseSortDate(work.sortDate);
+    }
 
-  if (order === "new") {
-    return dateB - dateA;
-  }
+    items.sort((a, b) => {
+      const startDiff = parseSortDate(a.sortDate) - parseSortDate(b.sortDate);
+      const endDiff = startDiff || parseEndDate(a) - parseEndDate(b);
 
-  return dateA - dateB;
-});
+      return order === "new" ? -endDiff : endDiff;
+    });
 
     // --------------------------------
     // Render
