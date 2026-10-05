@@ -293,6 +293,42 @@ setPager();
           block
         );
 
+        const image = block.querySelector("img");
+        const imageWrap = block.querySelector(".image-wrap");
+
+        const addViewMore = () => {
+          if (!image || !imageWrap || !image.naturalWidth) return;
+
+          const displayedHeight =
+            image.naturalHeight * image.getBoundingClientRect().width / image.naturalWidth;
+          const isLongImage =
+            image.naturalHeight / image.naturalWidth >= 1.6 &&
+            displayedHeight > 900;
+
+          if (!isLongImage) return;
+
+          imageWrap.classList.add("is-collapsed");
+
+          const viewMore = document.createElement("button");
+          viewMore.type = "button";
+          viewMore.className = "view-more";
+          viewMore.setAttribute("aria-label", "画像をすべて表示");
+          viewMore.innerHTML = "<span>VIEW MORE</span><span aria-hidden=\"true\">⌄</span>";
+
+          viewMore.addEventListener("click", () => {
+            imageWrap.classList.remove("is-collapsed");
+            viewMore.remove();
+          }, { once: true });
+
+          imageWrap.appendChild(viewMore);
+        };
+
+        if (image.complete) {
+          requestAnimationFrame(addViewMore);
+        } else {
+          image.addEventListener("load", addViewMore, { once: true });
+        }
+
       }
 
 
@@ -455,3 +491,4 @@ document.addEventListener("dragstart", (event) => {
     event.preventDefault();
   }
 });
+

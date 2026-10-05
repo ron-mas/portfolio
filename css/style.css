@@ -619,6 +619,45 @@ main {
   border-radius: 10px;
 }
 
+.content-image .image-wrap.is-collapsed {
+  max-height: min(560px, 70vh);
+}
+
+.view-more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  min-height: 42px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, .65);
+  border-radius: 0 0 10px 10px;
+  background: rgba(255, 255, 255, .58);
+  box-shadow: 0 -4px 22px rgba(255, 255, 255, .18);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  color: #20262b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.1;
+  cursor: pointer;
+}
+
+.view-more:hover,
+.view-more:focus-visible {
+  background: rgba(255, 255, 255, .76);
+}
+
+.view-more:focus-visible {
+  outline: 2px solid var(--key-dark);
+  outline-offset: -3px;
+}
+
 
 /* ========================================
    SAMPLE Overlay
@@ -1583,6 +1622,7 @@ main {
 
   background-position: 0 0;
 }
+
 
 
 
