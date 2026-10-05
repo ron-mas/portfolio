@@ -386,8 +386,7 @@ const WORKS_DATA = [
     "yearLabel": "2019/11 - 2019/12",
     "sortDate": "2019/11",
     "category": [
-     "web",
-     "illustration"
+     "web"
     ],
     "thumbnail": "assets/23_3rdxmas/23_1.png",
     "overview": "「崩壊3rd」Twitterクリスマスボックスキャンペーンにて、特設ページ、キャンペーンバナー、ハッシュフラッグ絵文字のイラスト制作を担当しました。",
