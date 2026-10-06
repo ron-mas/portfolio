@@ -336,7 +336,7 @@ const WORKS_DATA = [
      "web",
      "advertising"
     ],
-    "thumbnail": "assets/20_3rdbanner/20_1.png",
+    "thumbnail": "assets/20_3rdbanner/01.png",
     "overview": "2019年〜2022年にかけて、「崩壊3rd」のキャンペーンバナーやアプリのSNS運用バナーを多数制作しました。\n本ページでは、制作物の一部を抜粋して掲載しています。",
     "company": "株式会社miHoYo",
     "tools": "Photoshop",
