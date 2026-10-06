@@ -3,22 +3,27 @@
 
 {
       "type": "image",
-      "src": "21_1.png"
-    },
-
-{
-      "type": "image",
-      "src": "21_2.png"
+      "src": "01.jpg"
     },
 
 {
       "type": "text",
-      "text": "サイネージのデザイン"
+      "text": "サイネージ"
     },
 
 {
       "type": "image",
-      "src": "21_3.png"
+      "src": "02.jpg"
+    },
+
+{
+      "type": "text",
+      "text": "実際の写真"
+    },
+
+{
+      "type": "image",
+      "src": "03.jpeg"
     }
 
   ]
