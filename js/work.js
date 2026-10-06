@@ -296,8 +296,13 @@ setPager();
         const image = block.querySelector("img");
         const imageWrap = block.querySelector(".image-wrap");
 
+        if (imageWrap && Number.isFinite(item.maxWidth) && item.maxWidth > 0) {
+          imageWrap.style.width = `min(100%, ${item.maxWidth}px)`;
+          imageWrap.style.marginInline = "auto";
+        }
+
         const addViewMore = () => {
-          if (!image || !imageWrap || !image.naturalWidth) return;
+          if (!image || !imageWrap || !image.naturalWidth || item.viewMore === false) return;
 
           const displayedHeight =
             image.naturalHeight * image.getBoundingClientRect().width / image.naturalWidth;
@@ -491,4 +496,5 @@ document.addEventListener("dragstart", (event) => {
     event.preventDefault();
   }
 });
+
 
