@@ -353,7 +353,7 @@ const WORKS_DATA = [
     "category": [
      "advertising"
     ],
-    "thumbnail": "assets/21_3rd3rdad/21_1.png",
+    "thumbnail": "assets/21_3rd3rdad/01.jpg",
     "overview": "「崩壊3rd」3周年の屋外広告として、秋葉原ソフマップ壁面広告とJR秋葉原駅サイネージのデザインを担当しました。",
     "company": "株式会社miHoYo",
     "tools": "Photoshop / Illustrator",
@@ -371,7 +371,7 @@ const WORKS_DATA = [
      "web",
      "goods"
     ],
-    "thumbnail": "assets/22_tgs2019/22_0.png",
+    "thumbnail": "assets/22_tgs2019/0.png",
     "overview": "TGS2019のmiHoYoブース出展に関する制作物を一式担当しました。\n特設ページをはじめ、「崩壊3rd」「原神」の配布用チラシ、クリアファイル、アクリルスタンド、缶バッジ、Tシャツなどのノベルティを制作。\nブース整理券やTGSチケット背面に掲載する「原神」の広告デザインも担当しました。",
     "company": "株式会社miHoYo",
     "tools": "Photoshop / Illustrator",
