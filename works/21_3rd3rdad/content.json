@@ -1,30 +1,27 @@
 {
   "content": [
-
-{
+    {
       "type": "image",
       "src": "01.jpg"
     },
-
-{
+    {
       "type": "text",
       "text": "サイネージ"
     },
-
-{
+    {
       "type": "image",
-      "src": "02.jpg"
+      "src": "02.jpg",
+      "maxWidth": 600,
+      "viewMore": false
     },
-
-{
+    {
       "type": "text",
       "text": "実際の写真"
     },
-
-{
+    {
       "type": "image",
       "src": "03.jpeg"
     }
-
   ]
 }
+
