@@ -394,4 +394,21 @@ const WORKS_DATA = [
     "tools": "Photoshop / Illustrator",
     "areas": "web / バナー / 絵文字イラスト",
   },
+
+    // 24_genshin-cast-game-logo
+    
+    {
+    "slug": "24_genshin-cast-game-logo",
+    "title": 原神キャストゲーム部ロゴ,
+    "yearLabel": "2022/2",
+    "sortDate": "2022/2",
+    "category": [
+    "web"
+    ],
+    "thumbnail": "assets/24_genshin-cast-game-logo/24_1.png",
+    "overview": “YouTubeの企画「原神キャストゲーム部」のロゴを制作いたしました。”,
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": “ロゴデザイン",
+  },
 ]
