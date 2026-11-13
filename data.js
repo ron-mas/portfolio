@@ -428,4 +428,21 @@ const WORKS_DATA = [
     "tools": "Photoshop",
     "areas": "バナーデザイン",
   },
+
+    // 26_genshin-taiyaki
+    
+    {
+    "slug": "26_genshin-taiyaki",
+    "title": "原神焼き原画イラスト",
+    "yearLabel": "2021/3",
+    "sortDate": "2021/3",
+    "category": [
+    "illustration"
+    ],
+    "thumbnail": "assets/26_genshin-taiyaki/26_1.png",
+    "overview": "セガのたい焼きと原神がコラボした「原神焼き」第１弾と第２弾の原画イラストを担当しました。型にできるような強めのデフォルメでキャラを表現しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": "デフォルメイラスト",
+  },
 ]
