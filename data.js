@@ -457,10 +457,26 @@ const WORKS_DATA = [
     "advertising"
     ],
     "thumbnail": "assets/27_genshin-super-panorama/27_1.png",
-    "overview": "新宿のスーパーパノラマ広告のデザインを担当しました。全体のバランスやキャラクターの身長差を考慮し、空間を活かした配置を意識して制作しました。
-",
+    "overview": "新宿のスーパーパノラマ広告のデザインを担当しました。全体のバランスやキャラクターの身長差を考慮し、空間を活かした配置を意識して制作しました。",
     "company": "株式会社miHoYo",
-    "tools": "Photoshop",
+    "tools": "Photoshop / Illustrator",
+    "areas": "広告デザイン",
+  },
+
+    // 28_genshin-hachiko-board
+    
+    {
+    "slug": "28_genshin-hachiko-board",
+    "title": "原神 渋谷ハチコーボード広告",
+    "yearLabel": "2021/3",
+    "sortDate": "2021/3",
+    "category": [
+    "advertising"
+    ],
+    "thumbnail": "assets/28_genshin-hachiko-board/28_1.jpg",
+    "overview": "渋谷のハチコーボード広告のデザインを担当しました。KVパーツの配置調整やテキストの読みやすさなどを意識して制作しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
     "areas": "広告デザイン",
   },
 ]
