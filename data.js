@@ -445,4 +445,22 @@ const WORKS_DATA = [
     "tools": "Photoshop",
     "areas": "デフォルメイラスト",
   },
+
+    // 27_genshin-super-panorama
+    
+    {
+    "slug": "27_genshin-super-panorama",
+    "title": "原神 新宿スーパーパノラマ広告",
+    "yearLabel": "2020/11",
+    "sortDate": "2020/11",
+    "category": [
+    "advertising"
+    ],
+    "thumbnail": "assets/27_genshin-super-panorama/27_1.png",
+    "overview": "新宿のスーパーパノラマ広告のデザインを担当しました。全体のバランスやキャラクターの身長差を考慮し、空間を活かした配置を意識して制作しました。
+",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": "広告デザイン",
+  },
 ]
