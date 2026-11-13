@@ -479,4 +479,21 @@ const WORKS_DATA = [
     "tools": "Photoshop / Illustrator",
     "areas": "広告デザイン",
   },
+
+    // 29_genshin-yamanote-rong-board
+    
+    {
+    "slug": "29_genshin-yamanote-rong-board",
+    "title": "原神 山手ロングボード広告",
+    "yearLabel": "2021/5〜",
+    "sortDate": "2021/5",
+    "category": [
+    "advertising"
+    ],
+    "thumbnail": "assets/29_genshin-yamanote-rong-board/29_1.jpg",
+    "overview": "山手線内のロングボード広告のデザインを担当しました。初回のテンプレート制作から、その後の展開に合わせたデザインのバリエーション制作まで担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop / Illustrator",
+    "areas": "広告デザイン",
+  }
 ]
