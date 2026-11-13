@@ -409,6 +409,23 @@ const WORKS_DATA = [
     "overview": "YouTubeの企画「原神キャストゲーム部」のロゴを制作いたしました。",
     "company": "株式会社miHoYo",
     "tools": "Photoshop",
-    "areas": “ロゴデザイン",
+    "areas": "ロゴデザイン",
+  },
+
+    // 25_genshin-appstore
+    
+    {
+    "slug": "25_genshin-appstore",
+    "title": "原神App Store バナー",
+    "yearLabel": "2020/9 - 2022/2",
+    "sortDate": "2020/9",
+    "category": [
+    "web"
+    ],
+    "thumbnail": "assets/25_genshin-appstore/25_1.jpg",
+    "overview": "原神App Store バナーをリリースからVer.2.5までの間担当しました。",
+    "company": "株式会社miHoYo",
+    "tools": "Photoshop",
+    "areas": "バナーデザイン",
   },
 ]
