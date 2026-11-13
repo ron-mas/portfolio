@@ -399,14 +399,14 @@ const WORKS_DATA = [
     
     {
     "slug": "24_genshin-cast-game-logo",
-    "title": 原神キャストゲーム部ロゴ,
+    "title": "原神キャストゲーム部ロゴ",
     "yearLabel": "2022/2",
     "sortDate": "2022/2",
     "category": [
     "web"
     ],
     "thumbnail": "assets/24_genshin-cast-game-logo/24_1.png",
-    "overview": “YouTubeの企画「原神キャストゲーム部」のロゴを制作いたしました。”,
+    "overview": "YouTubeの企画「原神キャストゲーム部」のロゴを制作いたしました。",
     "company": "株式会社miHoYo",
     "tools": "Photoshop",
     "areas": “ロゴデザイン",
